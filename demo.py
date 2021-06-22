@@ -369,8 +369,8 @@ def page_tumors():
          p{text-align:center; font_size:100%; font-weight:bold; color:#3b4a46}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
-        @media screen and (max-width:780px){.css-1w0ubgf.e1tzin5v2{flex-flow:column wrap;}}
-        iframe {padding-right:25px; padding-left:20px}
+        @media screen and (max-width:780px){.css-rncmk8.e1tzin5v0{flex-flow:column wrap;}}
+        iframe {padding-right:25px; padding-left:20px}   
         </style>""", unsafe_allow_html=True)
 
     st.write("")
@@ -394,7 +394,7 @@ def page_tumors():
         st.write("")
         st.write("")
         brain_img = Image.open("images/primary_brain_tumors.jpg")
-        st.image(brain_img, width=320)
+        st.image(brain_img, width=310)
         
         
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
