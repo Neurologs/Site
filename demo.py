@@ -369,6 +369,7 @@ def page_tumors():
          p{text-align:center; font_size:100%; font-weight:bold; color:#3b4a46}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
+        @media screen and (max-width:780px){.css-rncmk8.e1tzin5v0{flex-flow:column wrap;}}
         iframe {padding-right:25px; padding-left:20px}
         </style>""", unsafe_allow_html=True)
     
@@ -380,13 +381,13 @@ def page_tumors():
     with col1:
         st.write("")
         st.write("")
-        st.components.v1.html("""
+        st.write("""
         <p style="text-align:justify; font-size:18px; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
         <p style="text-align:justify; font-size:14px; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
         <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
         <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
         <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p>
-        """, height=350)
+        """, allow_unsafe_html=True)
     with col2:
         st.write("")
         st.write("")
