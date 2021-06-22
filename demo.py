@@ -324,7 +324,7 @@ def page_alzheimer():
                     if verif_is_mri(test_mri) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
                         Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
-                     if verif_is_mri(test_mri) == 0:
+                    if verif_is_mri(test_mri) == 0:
                         analyse_alzheimer(test_img)
                                
     if random_check and generate_pred:
@@ -343,7 +343,6 @@ def page_alzheimer():
             with col2:
                 resize_image = cv2.resize(rand_image, (224, 224))
                 resize_image = np.expand_dims(resize_image, axis=0) 
-                verif_is_mri(resize_image)
                 analyse_alzheimer(rand_image)
 
 
@@ -434,7 +433,12 @@ def page_tumors():
                 
             if generate_pred:
                 with col2:
-                    analyse_mri_tumors(up_image)
+                    verif_is_mri(resize_image)
+                    if verif_is_mri(resize_image) == 1:
+                        components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
+                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
+                    if verif_is_mri(resize_image) == 0:
+                        analyse_mri_tumors(up_image)
 
     if random_check and generate_pred:
         with st.spinner('ANALYSIS IN PROGRESS'):
