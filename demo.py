@@ -1,3 +1,5 @@
+# LIBRAIRIES
+
 import streamlit as st
 import streamlit.components.v1 as components
 import numpy as np
@@ -9,6 +11,10 @@ import random
 from keras.models import load_model
 from keras.models import model_from_yaml
 import h5py
+
+
+
+# FUNCTIONS
 
 @st.cache(allow_output_mutation=True)
 def load_model_is_mri():
@@ -34,10 +40,7 @@ def alzheimer_model():
     model.make_predict_function()
     return model
     
-
-
-# FUNCTIONS
-
+    
 def random_scan_tumors(file):
     
     img = open(os.path.join(file, random.choice(os.listdir(file))), 'rb').read()
@@ -86,6 +89,7 @@ def verif_is_mri(test_mri):
     model = load_model_is_mri()
     verif = model.predict(test_mri)
     result_verif = np.argmax(verif)
+    return result_verif
     if result_verif == 1:
         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
                         Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
@@ -322,7 +326,8 @@ def page_alzheimer():
                     test_mri = cv2.resize(test_img, (224,224))
                     test_mri = np.expand_dims(test_mri, axis=0) 
                     verif_is_mri(test_mri)
-                    analyse_alzheimer(test_img)
+                    if verif_is_mri(test_mri) == 0:
+                        analyse_alzheimer(test_img)
                                
     if random_check and generate_pred:
         
@@ -345,10 +350,9 @@ def page_alzheimer():
 
 
 # PAGE BRAIN TUMORS
-#   .st-e8.st-ej.st-bq.st-ae.st-af.st-ag.st-ek.st-ai.st-aj {padding-left:6px; color:#10515C; font-size:16px; font-weight:bold; margin-top:5px;}
+
 def page_tumors():
-#
-       
+     
     st.write("""<style>
         .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek, .st-el {padding-left: 6px; padding-top:5px}                                        
         .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
