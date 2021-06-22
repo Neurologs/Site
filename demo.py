@@ -262,7 +262,7 @@ def page_alzheimer():
                 .css-rncmk8 > * {margin:0px}
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
                  p {text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
-                .css-1p9wfzo {color: #0c113899; text-align: right; margin-top: 1.5em; font-weight:380}
+                .css-1p9wfzo {color: #0c113899; text-align: right; margin-top: 1.5em; font-weight:400}
                 .st-ew {background-color: #fd79e133}
 
                 </style>""", unsafe_allow_html=True)
@@ -287,7 +287,7 @@ def page_alzheimer():
     st.write("")
     image_alzheimer = Image.open("images/brain_alzheimer.jpg")
     st.image(image_alzheimer, caption = "van Oostveen, de Lange ; “Imaging Techniques in Alzheimer’s Disease: A Review of Applications in Early Diagnosis and Longitudinal Monitoring” in International Journal of Molecular Sciences. 2021; 22(4):2110.")
-    st.write("""<p style="font-size:80%; color:#0c113899; text-align:center; font-weight:380">[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus]</p>""", unsafe_allow_html=True)
+    st.write("""<p style="font-size:80%; color:#0c113899; text-align:right; font-weight:400">[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus]</p>""", unsafe_allow_html=True)
     st.write("""<hr><p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. The model’s testing accuracy is near to 99%.<br><br>
                 The data used to design the algorithm consists of 6400 MRI (axial slices T1 weighted) categorized as non-demented, very mildly demented, mildly demented and moderately demented. Labels are based on the level of neurological degeneration as defined by the Global Deterioration Scale (or “Reisberg Scale”).<br><br>
                 Please upload a brain MRI or choose a random image to determine the stage of Alzheimer's disease the patient is experiencing.<br><br>
