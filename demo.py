@@ -462,19 +462,19 @@ def MMSE_page():
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Mini-Mental State Examination</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
    
-    st.write("""<p style="color:#051619; text-align:justify;"><br>
+    st.write("""<p><br>
              Originally introduced by Folstein et <i>al.</i> in 1975, The Mini–Mental State Examination (MMSE) is a 30-point questionnaire 
              used extensively as a screening device for cognitive impairment and as a diagnostic adjunct for assessing 
              Alzheimer’s disease or other types of dementias (Parkinson's disease, Lewy bodies, vascular dementia, etc.)<br><br>
              Administration of the test takes between 5 and 10 minutes and measures the following cognitive functions:</p>
              <ul>
-             <li style="color:#051619"> Orientation to time and place</li>
-             <li style="color:#051619"> Short-term memory</li>
-             <li style="color:#051619"> Attention and ability to solve problems</li>
-             <li style="color:#051619"> Language use and comprehension</li>
-             <li style="color:#051619"> Basic motor skills</li>
+             <li style="color:#3b4a46"> Orientation to time and place</li>
+             <li style="color:#3b4a46"> Short-term memory</li>
+             <li style="color:#3b4a46"> Attention and ability to solve problems</li>
+             <li style="color:#3b4a46"> Language use and comprehension</li>
+             <li style="color:#3b4a46"> Basic motor skills</li>
              </ul>
-             <p style="color:#051619; text-align:justify;">Any score of 24 or more (out of 30) indicates a normal cognition. Below this, scores can indicate mild (19–23 points), moderate (10–18 points) or severe (≤9 points) cognitive impairment.
+             <p>Any score of 24 or more (out of 30) indicates a normal cognition. Below this, scores can indicate mild (19–23 points), moderate (10–18 points) or severe (≤9 points) cognitive impairment.
              </p>""", unsafe_allow_html=True)
     
     st.write("")
@@ -693,7 +693,7 @@ def MMSE_page():
         
         
     st.markdown("""<style>
-                p, li{color:#126F90; font-weight:bold; text-align:justify}
+                p, li {color:#3b4a46; text-align:justify; font-weight:450}
                 .st-bv.st-ca.st-cb.st-ae.st-af.st-ag.st-ah.st-ai.st-aj{color:#3A4044}
                 .time{color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} .st-bg.st-bj.st-bk.st-bl.st-bm.st-bn.st-az.st-b4.st-bo.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-b2.st-by{background-color:#E2005B}
