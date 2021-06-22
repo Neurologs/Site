@@ -248,7 +248,7 @@ def page_alzheimer():
     
     
     st.write("""<style>
-                .st-bq {color:#10515C;} .st-ag {font-weight: bold;} .st-af {font-size: 1rem;} .st-ej, st-el {padding-left: 6px; margin-top:5px}                                        
+                .st-bq, st-br {color:#10515C;} .st-ag {font-weight: bold;} .st-af {font-size: 1rem;} .st-ek, st-el {padding-left: 6px; padding-top:5px}                                        
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
                 {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
                 .st-e0 {width: 30px;} .st-e1 {height: 30px;} .st-en {background-color: #12a67f} .st-eg {margin-left: 19px; margin-right: 14px;} 
@@ -330,7 +330,7 @@ def page_alzheimer():
                                
     if random_check and generate_pred:
         
-        file_test_alzheimer = "alzheimer/random/"
+        file_test_alzheimer = "alzheimer/random"
         rand_image = random_scan_alzheimer(file_test_alzheimer)
         
         with st.spinner('ANALYSIS IN PROGRESS'):
@@ -444,7 +444,7 @@ def page_tumors():
             st.write("")
             col1, col2 = st.beta_columns(2)
             with col1:
-                file_test_tumors = "alzheimer_random/"
+                file_test_tumors = "tumors_random"
                 rand_image = random_scan_tumors(file_test_tumors)
 
             with col2:
