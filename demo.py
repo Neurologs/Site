@@ -461,20 +461,32 @@ def MMSE_page():
     st.write("")
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Mini-Mental State Examination</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
-   
-    st.write("""<p><br>
+    
+    st.markdown("""<style>
+                p {color:#126F90; font-weight:bold; text-align:justify}
+                li {color:#3b4a46; text-align:justify; font-weight:450}
+                .st-bv.st-ca.st-cb.st-ae.st-af.st-ag.st-ah.st-ai.st-aj{color:#3A4044}
+                .time{color:#bb0f6e}
+                div.row-widget.stRadio > div{flex-direction:row;} .st-bg.st-bj.st-bk.st-bl.st-bm.st-bn.st-az.st-b4.st-bo.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-b2.st-by{background-color:#E2005B}
+                .css-158jk9h.edgvbvh1{text-align:center; background-color:#12A67F; width:700px; color:white; font-size:20px}                                                       
+                code, kbd {font-size: 22px; background-color:white; color: #bb0f6e}
+                .css-rncmk8.e1tzin5v0 p {text-align: center}
+                .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width:700px}
+                </style>""", unsafe_allow_html=True)
+
+    st.write("""<p style="color:#3b4a46; text-align:justify; font-weight:450"><br>
              Originally introduced by Folstein et <i>al.</i> in 1975, The Mini–Mental State Examination (MMSE) is a 30-point questionnaire 
              used extensively as a screening device for cognitive impairment and as a diagnostic adjunct for assessing 
              Alzheimer’s disease or other types of dementias (Parkinson's disease, Lewy bodies, vascular dementia, etc.)<br><br>
              Administration of the test takes between 5 and 10 minutes and measures the following cognitive functions:</p>
              <ul>
-             <li style="color:#3b4a46"> Orientation to time and place</li>
-             <li style="color:#3b4a46"> Short-term memory</li>
-             <li style="color:#3b4a46"> Attention and ability to solve problems</li>
-             <li style="color:#3b4a46"> Language use and comprehension</li>
-             <li style="color:#3b4a46"> Basic motor skills</li>
+             <li> Orientation to time and place</li>
+             <li> Short-term memory</li>
+             <li> Attention and ability to solve problems</li>
+             <li> Language use and comprehension</li>
+             <li> Basic motor skills</li>
              </ul>
-             <p>Any score of 24 or more (out of 30) indicates a normal cognition. Below this, scores can indicate mild (19–23 points), moderate (10–18 points) or severe (≤9 points) cognitive impairment.
+             <p style="color:#3b4a46; text-align:justify; font-weight:450">Any score of 24 or more (out of 30) indicates a normal cognition. Below this, scores can indicate mild (19–23 points), moderate (10–18 points) or severe (≤9 points) cognitive impairment.
              </p>""", unsafe_allow_html=True)
     
     st.write("")
@@ -645,8 +657,7 @@ def MMSE_page():
         figure_score = 1
     if figure == 'Not applicable':
         not_applicable -= 1
-    
-    
+       
     total_score = orientation_time_score + orientation_place_score + learning_score + count_score + recall_score + naming_score + repetition_score + eyes_score + sentence_score + action_score + figure_score
     
     if not_applicable > 0:
@@ -663,7 +674,6 @@ def MMSE_page():
     else: 
         result = "Error. Please retry."
     
-    
     st.write("")
     st.write("")
     st.write("")
@@ -674,7 +684,6 @@ def MMSE_page():
     st.write("")
     st.write("")
     
-
     if adjusted:
         
         col1, col2 = st.beta_columns(2)
@@ -691,20 +700,6 @@ def MMSE_page():
             st.write(result, unsafe_allow_html=True)
             st.write("")
         
-        
-    st.markdown("""<style>
-                p, li {color:#3b4a46; text-align:justify; font-weight:450}
-                .st-bv.st-ca.st-cb.st-ae.st-af.st-ag.st-ah.st-ai.st-aj{color:#3A4044}
-                .time{color:#bb0f6e}
-                div.row-widget.stRadio > div{flex-direction:row;} .st-bg.st-bj.st-bk.st-bl.st-bm.st-bn.st-az.st-b4.st-bo.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-b2.st-by{background-color:#E2005B}
-                .css-158jk9h.edgvbvh1{text-align:center; background-color:#12A67F; width:700px; color:white; font-size:20px}                                                       
-                code, kbd {font-size: 22px; background-color:white; color: #bb0f6e}
-                .css-rncmk8.e1tzin5v0 p {text-align: center}
-                .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width:700px}
-                </style>""", unsafe_allow_html=True)
-                
-                
-    
 
 # PAGE ONGOING PROJECTS
 
