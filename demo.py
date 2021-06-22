@@ -262,6 +262,7 @@ def page_alzheimer():
                 .uploadedFileData.css-1l4firl.exg6vvm8 {color:#10515C}
                 .css-rncmk8 > * {margin:0px}
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
+                .st-ew {background-color: #fef3fe}
                  p {text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
                 .css-1p9wfzo {color: #0c113899; text-align: left; margin-top: 1.5em; font-weight:400; font-size:85%}
                 </style>""", unsafe_allow_html=True)
