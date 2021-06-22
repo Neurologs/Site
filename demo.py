@@ -89,9 +89,6 @@ def verif_is_mri(test_mri):
     model = load_model_is_mri()
     verif = model.predict(test_mri)
     result_verif = np.argmax(verif)
-    if result_verif == 1:
-        components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
     return result_verif
 
 
@@ -326,7 +323,10 @@ def page_alzheimer():
                     test_mri = cv2.resize(test_img, (224,224))
                     test_mri = np.expand_dims(test_mri, axis=0) 
                     verif_is_mri(test_mri)
-                    if verif_is_mri(test_mri) == 0:
+                    if verif_is_mri(test_mri) == 1:
+                        components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
+                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
+                     if verif_is_mri(test_mri) == 0:
                         analyse_alzheimer(test_img)
                                
     if random_check and generate_pred:
