@@ -252,8 +252,8 @@ def page_alzheimer():
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
                 {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
                 .st-e0 {width: 30px} .st-e1 {height: 30px} .st-en {background-color: #12a67f} .st-eg {margin-left: 19px; margin-right: 14px;} 
-                .st-ep {background-color:#f9dcfc}
-                .st-ey {background-color: #f9dcfc; width:700px}
+                .st-ep {background-color: ##fef3fe}
+                .st-ey {background-color: ##fef3fe; width:700px}
                 .css-9ycgxx.exg6vvm3 {color:white}
                 .css-113fe4q.euu6i2w0 {color:gray}
                 .css-1op0mqd.exg6vvm2 {color:yellow} 
@@ -264,8 +264,6 @@ def page_alzheimer():
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
                  p {text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
                 .css-1p9wfzo {color: #0c113899; text-align: left; margin-top: 1.5em; font-weight:400; font-size:85%}
-                .st-ew {background-color: #fd79e133}
-
                 </style>""", unsafe_allow_html=True)
     
     st.write("")
@@ -326,7 +324,7 @@ def page_alzheimer():
                     if verif_is_mri(test_mri) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
                         Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
-                    if verif_is_mri(test_mri) == 0:
+                     if verif_is_mri(test_mri) == 0:
                         analyse_alzheimer(test_img)
                                
     if random_check and generate_pred:
@@ -346,11 +344,7 @@ def page_alzheimer():
                 resize_image = cv2.resize(rand_image, (224, 224))
                 resize_image = np.expand_dims(resize_image, axis=0) 
                 verif_is_mri(resize_image)
-                if verif_is_mri(test_mri) == 1:
-                    components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200)
-                if verif_is_mri(test_mri) == 0:
-                    analyse_alzheimer(test_img)
+                analyse_alzheimer(rand_image)
 
 
 # PAGE BRAIN TUMORS
