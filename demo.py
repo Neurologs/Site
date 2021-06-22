@@ -12,27 +12,25 @@ import h5py
 
 @st.cache(allow_output_mutation=True)
 def load_model_is_mri():
-    model = load_model(
-        "C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\model_is_mri")
+    model = load_model("model_is_mri")
     model.make_predict_function()
     return model
 
 
 @st.cache(allow_output_mutation=True)
 def load_model_classifier():
-    model = load_model(
-        "C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\model_classifier_brain_tumors")
+    model = load_model("model_classifier_brain_tumors")
     model.make_predict_function()
     return model
 
 
 @st.cache(allow_output_mutation=True)
 def alzheimer_model():
-    yaml_file = open('C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\yaml_alzheimer\\model.yaml', 'r')
+    yaml_file = open('model_alzheimer/model.yaml', 'r')
     loaded_model_yaml = yaml_file.read()
     yaml_file.close()
     model = model_from_yaml(loaded_model_yaml)
-    model.load_weights("C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\yaml_alzheimer\\adweights.h5")
+    model.load_weights('model_alzheimer/adweights.h5')
     model.make_predict_function()
     return model
     
@@ -204,7 +202,7 @@ def analyse_alzheimer(test_img):
 
 with st.sidebar:
     logo = Image.open(
-        "C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\logo_app.jpg")
+        "images/logo_app.jpg")
     st.image(logo)
     signature = """<h2 style = "text_align:center; color:white; font-family:Gadugi;"><b>AI for brain health<b></h2>
                    <hr>"""
@@ -233,8 +231,7 @@ def homepage():
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain disorders : a global epidemic</b><br><br></h1>"""
     st.markdown(title, unsafe_allow_html=True)
     with st.beta_container():
-        image_app = Image.open(
-            "C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\map_sans_titre.jpg")
+        image_app = Image.open("images/home_map.jpg")
         st.image(image_app, use_column_width=True)
 
     home_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
@@ -289,7 +286,7 @@ def page_alzheimer():
     
     st.write("")
     st.write("")
-    image_alzheimer = Image.open("C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\brain_alzheimer.jpg")
+    image_alzheimer = Image.open("images/brain_alzheimer.jpg")
     st.image(image_alzheimer, caption = "[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus] van Oostveen, de Lange ; “Imaging Techniques in Alzheimer’s Disease: A Review of Applications in Early Diagnosis and Longitudinal Monitoring” in International Journal of Molecular Sciences. 2021; 22(4):2110.")
     
     st.write("""<hr><p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. The model’s testing accuracy is near to 99%.<br><br>
@@ -333,7 +330,7 @@ def page_alzheimer():
                                
     if random_check and generate_pred:
         
-        file_test_alzheimer = "C:\\Users\\Dell\\Desktop\\Alzheimer\\testing"
+        file_test_alzheimer = "alzheimer/random/"
         rand_image = random_scan_alzheimer(file_test_alzheimer)
         
         with st.spinner('ANALYSIS IN PROGRESS'):
@@ -396,7 +393,7 @@ def page_tumors():
         st.write("")
         st.write("")
         st.write("")
-        brain_img = Image.open("C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\primary_brain_tumors.jpg")
+        brain_img = Image.open("images/primary_brain_tumors.jpg")
         st.image(brain_img, width=320)
         
         
@@ -447,7 +444,7 @@ def page_tumors():
             st.write("")
             col1, col2 = st.beta_columns(2)
             with col1:
-                file_test_tumors = "C:\\Users\\Dell\\Desktop\\Neurologs_deployment\\Testing"
+                file_test_tumors = "alzheimer_random/"
                 rand_image = random_scan_tumors(file_test_tumors)
 
             with col2:
@@ -637,7 +634,7 @@ def MMSE_page():
     st.write("")
     st.write("""<p><span style="color:#3A4044";>[<i>Place design, eraser and pencil in front of the patient.</i>]</span><br>
     <u>Say</u> : Copy this design please.<br><span style="color:#3A4044";>[<i>Allow multiple tries. Wait until the person is finished and hands it back. The patient must have drawn a four-sided figure between two five-sided figures.</i>]</span></p>""", unsafe_allow_html=True)
-    figure_photo = Image.open("C:\\Users\\Dell\\Desktop\\Neurologs_streamlit_app\\figure_mmse.jpg")
+    figure_photo = Image.open("images/figure_mmse.jpg")
     st.image(figure_photo)
     figure = st.radio("",('Correct', 'Incorrect', 'Not applicable'), key='figure')
     figure_score = 0
