@@ -247,22 +247,22 @@ def homepage():
 def page_alzheimer():
      
     st.write("""<style>
-                .st-br {color:#10515C;} .st-ag {font-weight: bold;} .st-af {font-size: 1rem;} .st-ek, .st-el {padding-left: 6px; padding-top:5px}                                        
+                .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek, .st-el {padding-left: 6px; padding-top:5px}                                        
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
                 {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
-                .st-e0 {width: 30px;} .st-e1 {height: 30px;} .st-en {background-color: #12a67f} .st-eg {margin-left: 19px; margin-right: 14px;} 
-                .st-ep{background-color:#f9dcfc;}
-                .st-ey{background-color: #f9dcfc; width:700px;}
-                .css-9ycgxx.exg6vvm3{color:white}
-                .css-113fe4q.euu6i2w0{color:gray}
-                .css-1op0mqd.exg6vvm2{color:yellow} 
-                .css-1qpos38{background-color:#12A67F; color:white; font-size:18px} 
-                .row-widget.stButton{text-align:center}
-                .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C}
+                .st-e0 {width: 30px} .st-e1 {height: 30px} .st-en {background-color: #12a67f} .st-eg {margin-left: 19px; margin-right: 14px;} 
+                .st-ep {background-color:#f9dcfc}
+                .st-ey {background-color: #f9dcfc; width:700px}
+                .css-9ycgxx.exg6vvm3 {color:white}
+                .css-113fe4q.euu6i2w0 {color:gray}
+                .css-1op0mqd.exg6vvm2 {color:yellow} 
+                .css-1qpos38 {background-color:#12A67F; color:white; font-size:18px} 
+                .row-widget.stButton {text-align:center}
+                .uploadedFileData.css-1l4firl.exg6vvm8 {color:#10515C}
                 .css-rncmk8 > * {margin:0px}
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
-                p{text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
-                .css-1p9wfzo {color: #0c113899; text-align: justify; margin-top: 0.8em;}
+                 p {text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
+                .css-1p9wfzo {color: #0c113899; text-align: justify; margin-top: 1em; font-weight:450}
                 .st-ew {background-color: #fd79e133}
 
                 </style>""", unsafe_allow_html=True)
@@ -287,7 +287,7 @@ def page_alzheimer():
     st.write("")
     image_alzheimer = Image.open("images/brain_alzheimer.jpg")
     st.image(image_alzheimer, caption = "van Oostveen, de Lange ; “Imaging Techniques in Alzheimer’s Disease: A Review of Applications in Early Diagnosis and Longitudinal Monitoring” in International Journal of Molecular Sciences. 2021; 22(4):2110.")
-    st.write("""<p style="font-size:80%; color:#0c113899; text-align:justify">[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus]</p>""", unsafe_allow_html=True)
+    st.write("""<p style="font-size:80%; color:#0c113899; text-align:justify; font-weight:350">[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus]</p>""", unsafe_allow_html=True)
     st.write("""<hr><p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. The model’s testing accuracy is near to 99%.<br><br>
                 The data used to design the algorithm consists of 6400 MRI (axial slices T1 weighted) categorized as non-demented, very mildly demented, mildly demented and moderately demented. Labels are based on the level of neurological degeneration as defined by the Global Deterioration Scale (or “Reisberg Scale”).<br><br>
                 Please upload a brain MRI or choose a random image to determine the stage of Alzheimer's disease the patient is experiencing.<br><br>
