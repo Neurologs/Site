@@ -245,8 +245,7 @@ def homepage():
 # PAGE ALZHEIMER
 
 def page_alzheimer():
-    
-    
+     
     st.write("""<style>
                 .st-br {color:#10515C;} .st-ag {font-weight: bold;} .st-af {font-size: 1rem;} .st-ek, .st-el {padding-left: 6px; padding-top:5px}                                        
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
@@ -287,8 +286,8 @@ def page_alzheimer():
     st.write("")
     st.write("")
     image_alzheimer = Image.open("images/brain_alzheimer.jpg")
-    st.image(image_alzheimer, caption = "[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus] van Oostveen, de Lange ; “Imaging Techniques in Alzheimer’s Disease: A Review of Applications in Early Diagnosis and Longitudinal Monitoring” in International Journal of Molecular Sciences. 2021; 22(4):2110.")
-    
+    st.image(image_alzheimer, caption = "van Oostveen, de Lange ; “Imaging Techniques in Alzheimer’s Disease: A Review of Applications in Early Diagnosis and Longitudinal Monitoring” in International Journal of Molecular Sciences. 2021; 22(4):2110.")
+    st.write("""<p style="font-size:80%; color:#0c113899; text-align:justify>[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus]</p>""", unsafe_allow_html=True)
     st.write("""<hr><p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. The model’s testing accuracy is near to 99%.<br><br>
                 The data used to design the algorithm consists of 6400 MRI (axial slices T1 weighted) categorized as non-demented, very mildly demented, mildly demented and moderately demented. Labels are based on the level of neurological degeneration as defined by the Global Deterioration Scale (or “Reisberg Scale”).<br><br>
                 Please upload a brain MRI or choose a random image to determine the stage of Alzheimer's disease the patient is experiencing.<br><br>
@@ -305,7 +304,6 @@ def page_alzheimer():
     st.write("")
     st.write("")
 
-
     if uploaded_file is not None and generate_pred:
         file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
         test_img = cv2.imdecode(file_bytes, cv2.IMREAD_ANYCOLOR)
@@ -315,13 +313,11 @@ def page_alzheimer():
             st.write("")
             st.write("")
             col1, col2 = st.beta_columns(2)
-
-            
+          
             with col1:
                 test_img = cv2.resize(test_img, (350,350))
                 st.image(test_img)
-                 
-           
+                            
             with col2:
                     test_mri = cv2.resize(test_img, (224,224))
                     test_mri = np.expand_dims(test_mri, axis=0) 
