@@ -464,10 +464,10 @@ def MMSE_page():
     st.markdown("""<style>
                 p {color:#126F90; font-weight:bold; text-align:justify}
                 li {color:#3b4a46; text-align:justify; font-weight:450}
-                .st-bv.st-ca.st-cb.st-ae.st-af.st-ag.st-ah.st-ai.st-aj{color:#3A4044}
+                .st-bq{color:#3A4044}
                 .time{color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} .st-bg.st-bj.st-bk.st-bl.st-bm.st-bn.st-az.st-b4.st-bo.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-b2.st-by{background-color:#E2005B}
-                .css-158jk9h.edgvbvh1{text-align:center; background-color:#12A67F; width:700px; color:white; font-size:20px}                                                       
+                .css-1qpos38 {text-align:center; background-color:#12A67F; width:350px; color:white; font-size:20px}                                                       
                 code, kbd {font-size: 22px; background-color:white; color: #bb0f6e}
                 .css-rncmk8.e1tzin5v0 p {text-align: center}
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width:700px}
