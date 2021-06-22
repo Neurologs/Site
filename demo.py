@@ -221,7 +221,7 @@ def main():
     page = st.sidebar.selectbox("", tuple(pages.keys()))
     pages[page]()
     st.markdown(
-        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0{font-weight: bolder; color: rgba(14,185,140,1);}</style>""", unsafe_allow_html=True)
+        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0{font-weight: bold; color: rgba(14,185,140,1);}</style>""", unsafe_allow_html=True)
 
 # HOMEPAGE
 
@@ -248,7 +248,7 @@ def page_alzheimer():
     
     
     st.write("""<style>
-                .st-bq, st-br {color:#10515C;} .st-ag {font-weight: bold;} .st-af {font-size: 1rem;} .st-ek, st-el {padding-left: 6px; padding-top:5px}                                        
+                .st-br {color:#10515C;} .st-ag {font-weight: bold;} .st-af {font-size: 1rem;} .st-ek, st-el {padding-left: 6px; padding-top:5px}                                        
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
                 {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
                 .st-e0 {width: 30px;} .st-e1 {height: 30px;} .st-en {background-color: #12a67f} .st-eg {margin-left: 19px; margin-right: 14px;} 
@@ -257,7 +257,7 @@ def page_alzheimer():
                 .css-9ycgxx.exg6vvm3{color:white}
                 .css-113fe4q.euu6i2w0{color:gray}
                 .css-1op0mqd.exg6vvm2{color:yellow} 
-                .css-158jk9h.edgvbvh1{background-color:#12A67F; color:white; font-size:20px} 
+                .css-1qpos38{background-color:#12A67F; color:white; font-size:20px} 
                 .row-widget.stButton{text-align:center}
                 .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C}
                 .css-rncmk8 > * {margin:0px}
