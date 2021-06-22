@@ -387,7 +387,7 @@ def page_tumors():
         <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
         <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
         <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p>
-        """, allow_unsafe_html=True)
+        """, unsafe_allow_html=True)
     with col2:
         st.write("")
         st.write("")
