@@ -1,0 +1,705 @@
+backend: tensorflow
+class_name: Functional
+config:
+  input_layers:
+  - [input_1, 0, 0]
+  layers:
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: InputLayer
+      config:
+        batch_input_shape: !!python/tuple [null, 176, 208, 3]
+        dtype: float32
+        name: input_1
+        ragged: false
+        sparse: false
+      inbound_nodes: []
+      name: input_1
+    state: {object_id: 0, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 2, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 64
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 1, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block1_conv1
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - input_1
+          - 0
+          - 0
+          - {}
+      name: block1_conv1
+    state: {object_id: 3, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 5, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 64
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 4, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block1_conv2
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block1_conv1
+          - 0
+          - 0
+          - {}
+      name: block1_conv2
+    state: {object_id: 6, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: MaxPooling2D
+      config:
+        data_format: channels_last
+        dtype: float32
+        name: block1_pool
+        padding: valid
+        pool_size: !!python/tuple [2, 2]
+        strides: !!python/tuple [2, 2]
+        trainable: true
+      inbound_nodes:
+      - - - block1_conv2
+          - 0
+          - 0
+          - {}
+      name: block1_pool
+    state: {object_id: 7, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 9, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 128
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 8, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block2_conv1
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block1_pool
+          - 0
+          - 0
+          - {}
+      name: block2_conv1
+    state: {object_id: 10, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 12, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 128
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 11, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block2_conv2
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block2_conv1
+          - 0
+          - 0
+          - {}
+      name: block2_conv2
+    state: {object_id: 13, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: MaxPooling2D
+      config:
+        data_format: channels_last
+        dtype: float32
+        name: block2_pool
+        padding: valid
+        pool_size: !!python/tuple [2, 2]
+        strides: !!python/tuple [2, 2]
+        trainable: true
+      inbound_nodes:
+      - - - block2_conv2
+          - 0
+          - 0
+          - {}
+      name: block2_pool
+    state: {object_id: 14, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 16, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 256
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 15, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block3_conv1
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block2_pool
+          - 0
+          - 0
+          - {}
+      name: block3_conv1
+    state: {object_id: 17, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 19, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 256
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 18, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block3_conv2
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block3_conv1
+          - 0
+          - 0
+          - {}
+      name: block3_conv2
+    state: {object_id: 20, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 22, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 256
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 21, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block3_conv3
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block3_conv2
+          - 0
+          - 0
+          - {}
+      name: block3_conv3
+    state: {object_id: 23, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: MaxPooling2D
+      config:
+        data_format: channels_last
+        dtype: float32
+        name: block3_pool
+        padding: valid
+        pool_size: !!python/tuple [2, 2]
+        strides: !!python/tuple [2, 2]
+        trainable: true
+      inbound_nodes:
+      - - - block3_conv3
+          - 0
+          - 0
+          - {}
+      name: block3_pool
+    state: {object_id: 24, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 26, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 512
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 25, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block4_conv1
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block3_pool
+          - 0
+          - 0
+          - {}
+      name: block4_conv1
+    state: {object_id: 27, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 29, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 512
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 28, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block4_conv2
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block4_conv1
+          - 0
+          - 0
+          - {}
+      name: block4_conv2
+    state: {object_id: 30, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 32, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 512
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 31, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block4_conv3
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block4_conv2
+          - 0
+          - 0
+          - {}
+      name: block4_conv3
+    state: {object_id: 33, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: MaxPooling2D
+      config:
+        data_format: channels_last
+        dtype: float32
+        name: block4_pool
+        padding: valid
+        pool_size: !!python/tuple [2, 2]
+        strides: !!python/tuple [2, 2]
+        trainable: true
+      inbound_nodes:
+      - - - block4_conv3
+          - 0
+          - 0
+          - {}
+      name: block4_pool
+    state: {object_id: 34, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 36, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 512
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 35, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block5_conv1
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block4_pool
+          - 0
+          - 0
+          - {}
+      name: block5_conv1
+    state: {object_id: 37, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 39, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 512
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 38, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block5_conv2
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block5_conv1
+          - 0
+          - 0
+          - {}
+      name: block5_conv2
+    state: {object_id: 40, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Conv2D
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 42, ref_count: 1}
+        bias_regularizer: null
+        data_format: channels_last
+        dilation_rate: !!python/tuple [1, 1]
+        dtype: float32
+        filters: 512
+        groups: 1
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 41, ref_count: 1}
+        kernel_regularizer: null
+        kernel_size: !!python/tuple [3, 3]
+        name: block5_conv3
+        padding: same
+        strides: !!python/tuple [1, 1]
+        trainable: true
+        use_bias: true
+      inbound_nodes:
+      - - - block5_conv2
+          - 0
+          - 0
+          - {}
+      name: block5_conv3
+    state: {object_id: 43, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: MaxPooling2D
+      config:
+        data_format: channels_last
+        dtype: float32
+        name: block5_pool
+        padding: valid
+        pool_size: !!python/tuple [2, 2]
+        strides: !!python/tuple [2, 2]
+        trainable: true
+      inbound_nodes:
+      - - - block5_conv3
+          - 0
+          - 0
+          - {}
+      name: block5_pool
+    state: {object_id: 44, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: GlobalMaxPooling2D
+      config: {data_format: channels_last, dtype: float32, name: global_max_pooling2d,
+        trainable: true}
+      inbound_nodes:
+      - - - block5_pool
+          - 0
+          - 0
+          - {}
+      name: global_max_pooling2d
+    state: {object_id: 45, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Flatten
+      config: {data_format: channels_last, dtype: float32, name: flatten, trainable: true}
+      inbound_nodes:
+      - - - global_max_pooling2d
+          - 0
+          - 0
+          - {}
+      name: flatten
+    state: {object_id: 46, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Dense
+      config:
+        activation: relu
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 48, ref_count: 1}
+        bias_regularizer: null
+        dtype: float32
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: VarianceScaling
+            config: {distribution: uniform, mode: fan_in, scale: 2.0, seed: null}
+          state: {object_id: 47, ref_count: 1}
+        kernel_regularizer: null
+        name: dense
+        trainable: true
+        units: 1024
+        use_bias: true
+      inbound_nodes:
+      - - - flatten
+          - 0
+          - 0
+          - {}
+      name: dense
+    state: {object_id: 49, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Dropout
+      config: {dtype: float32, name: dropout, noise_shape: null, rate: 0.25, seed: null,
+        trainable: true}
+      inbound_nodes:
+      - - - dense
+          - 0
+          - 0
+          - {}
+      name: dropout
+    state: {object_id: 50, ref_count: 1}
+  - !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+    dictitems:
+      class_name: Dense
+      config:
+        activation: softmax
+        activity_regularizer: null
+        bias_constraint: null
+        bias_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: Zeros
+            config: {}
+          state: {object_id: 52, ref_count: 1}
+        bias_regularizer: null
+        dtype: float32
+        kernel_constraint: null
+        kernel_initializer: !!python/object/new:tensorflow.python.keras.utils.generic_utils.SharedObjectConfig
+          dictitems:
+            class_name: GlorotUniform
+            config: {seed: null}
+          state: {object_id: 51, ref_count: 1}
+        kernel_regularizer: null
+        name: dense_1
+        trainable: true
+        units: 4
+        use_bias: true
+      inbound_nodes:
+      - - - dropout
+          - 0
+          - 0
+          - {}
+      name: dense_1
+    state: {object_id: 53, ref_count: 1}
+  name: model
+  output_layers:
+  - [dense_1, 0, 0]
+keras_version: 2.5.0
