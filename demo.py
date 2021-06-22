@@ -458,7 +458,6 @@ def page_tumors():
 def MMSE_page():
     
     st.write("")
-    st.write("")
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Mini-Mental State Examination</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
     
@@ -473,8 +472,10 @@ def MMSE_page():
                 .css-rncmk8.e1tzin5v0 p {text-align: center}
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width:700px}
                 </style>""", unsafe_allow_html=True)
-
-    st.write("""<p style="color:#3b4a46; text-align:justify; font-weight:450"><br>
+    
+    st.write("")
+    st.write("")
+    st.write("""<p style="color:#3b4a46; text-align:justify; font-weight:450">
              Originally introduced by Folstein et <i>al.</i> in 1975, The Mini–Mental State Examination (MMSE) is a 30-point questionnaire 
              used extensively as a screening device for cognitive impairment and as a diagnostic adjunct for assessing 
              Alzheimer’s disease or other types of dementias (Parkinson's disease, Lewy bodies, vascular dementia, etc.)<br><br>
