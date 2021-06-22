@@ -428,17 +428,17 @@ def page_tumors():
                 up_image = cv2.cvtColor(up_image, cv2.COLOR_BGR2RGB)
                 resize_image = cv2.resize(up_image, (350, 350))
                 st.image(resize_image)
-                up_image = crop_image(up_image)
-                up_image = cv2.resize(up_image, (224, 224))
-                up_image = np.expand_dims(up_image, axis=0)
+                cropped_image = crop_image(up_image)
+                test_img = cv2.resize(cropped_image, (224, 224))
+                up_image = np.expand_dims(test_image, axis=0)
                 
             if generate_pred:
                 with col2:
-                    verif_is_mri(resize_image)
-                    if verif_is_mri(resize_image) == 1:
+                    verif_is_mri(test_img)
+                    if verif_is_mri(test_img) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
                         Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
-                    if verif_is_mri(resize_image) == 0:
+                    if verif_is_mri(test_img) == 0:
                         analyse_mri_tumors(up_image)
 
     if random_check and generate_pred:
@@ -457,6 +457,7 @@ def page_tumors():
 
 def MMSE_page():
     
+    st.write("")
     st.write("")
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Mini-Mental State Examination</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
