@@ -430,7 +430,7 @@ def page_tumors():
                 st.image(resize_image)
                 cropped_image = crop_image(up_image)
                 test_img = cv2.resize(cropped_image, (224, 224))
-                up_image = np.expand_dims(test_image, axis=0)
+                up_image = np.expand_dims(test_img, axis=0)
                 
             if generate_pred:
                 with col2:
