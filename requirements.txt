@@ -1,7 +1,8 @@
 keras_nightly==2.5.0.dev2021032900
+tensorflow-cpu==2.5.0
 h5py==3.1.0
 imutils==0.5.4
-opencv_python==4.5.2.52
+opencv_python-headless==4.5.2.52
 numpy==1.20.2
 streamlit==0.82.0
 keras==2.4.3
