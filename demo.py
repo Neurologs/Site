@@ -434,11 +434,11 @@ def page_tumors():
                 
             if generate_pred:
                 with col2:
-                    verif_is_mri(test_img)
-                    if verif_is_mri(test_img) == 1:
+                    verif_is_mri(up_image)
+                    if verif_is_mri(up_image) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
                         Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
-                    if verif_is_mri(test_img) == 0:
+                    if verif_is_mri(up_image) == 0:
                         analyse_mri_tumors(up_image)
 
     if random_check and generate_pred:
