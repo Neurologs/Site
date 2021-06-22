@@ -324,7 +324,7 @@ def page_alzheimer():
                     verif_is_mri(test_mri)
                     if verif_is_mri(test_mri) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
+                        Are you sure it is<br> a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
                     if verif_is_mri(test_mri) == 0:
                         analyse_alzheimer(test_img)
                                
@@ -437,7 +437,7 @@ def page_tumors():
                     verif_is_mri(up_image)
                     if verif_is_mri(up_image) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
+                        Are you sure it is<br> a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
                     if verif_is_mri(up_image) == 0:
                         analyse_mri_tumors(up_image)
 
