@@ -357,7 +357,7 @@ def page_tumors():
         {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
         .st-e0 {width: 30px} .st-e1 {height: 30px} .st-en, .st-f0 {background-color: #12a67f} .st-eg {margin-left: 19px; margin-right: 14px;} 
         .st-ep {background-color:#fef3fe}
-        .st-ey {background-color: #fef3fe; width:700px}
+        .st-ey {background-color: #10515c}
         .css-9ycgxx.exg6vvm3 {color:white}
         .css-113fe4q.euu6i2w0 {color:gray}
         .css-1op0mqd.exg6vvm2 {color:yellow} 
@@ -379,6 +379,7 @@ def page_tumors():
     st.write("")
     col1, col2 = st.beta_columns(2)
     with col1:
+        st.write("")
         st.components.v1.html("""
         <p style="text-align:left; font-size:110%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
