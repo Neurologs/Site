@@ -368,7 +368,7 @@ def page_tumors():
          p{text-align:center; font_size:100%; font-weight:bold; color:#3b4a46}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; background-color: lightyellow;} 
-        .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; width:350px; margin:0px}
+        .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
         @media screen and (max-width: 780px){.css-rncmk8{flex-flow: column wrap;}}
         iframe {padding-right:25px; padding-left:20px}   
         </style>""", unsafe_allow_html=True)
@@ -377,11 +377,12 @@ def page_tumors():
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain tumors classifier</b><br><br></h1>"""
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
+    
     col1, col2 = st.beta_columns(2)
+    
     with col1:
-        st.write("")
         st.components.v1.html("""
-        <p style="text-align:left; font-size:110%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
+        <br><p style="text-align:left; font-size:110%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
@@ -389,7 +390,6 @@ def page_tumors():
         """, height=350)
         
     with col2:
-        st.write("")
         st.write("")
         st.write("")
         brain_img = Image.open("images/primary_brain_tumors.jpg")
