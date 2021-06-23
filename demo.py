@@ -254,8 +254,7 @@ def page_alzheimer():
     st.write("""<style>
                 .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek {padding-left: 6px; padding-top:5px}                                        
                 .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
-                .st-e0 {width: 30px} .st-e1 {height: 30px} .st-ea, .st-fo, .st-ep {background-color: #10515c} .st-eg {margin-left: 19px; margin-right: 14px;} 
-                
+                .st-e0 {width: 30px} .st-e1 {height: 30px} .st-fo, .st-ep {background-color: #10515c} .st-eg {margin-left: 19px; margin-right: 14px;} 
                 .st-en, .st-ey, .st-ew {background-color:#fef3fe}
                 .css-9ycgxx.exg6vvm3 {color:white}
                 .css-113fe4q.euu6i2w0 {color:gray}
