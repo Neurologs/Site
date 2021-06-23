@@ -378,25 +378,9 @@ def page_tumors():
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
     
-    col1, col2 = st.beta_columns(2)
+    st.image("images/tumors_pres", use_column_width='auto')
     
-    with col1:
-        st.write("")
-        st.write("")
-        st.write("""
-        <p style="text-align:left; font-size:100%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
-        <p style="text-align:justify; font-size:88%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
-        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
-        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
-        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p><br>
-        """, unsafe_allow_html=True)
-        
-    with col2:
-        st.write("")
-        st.write("")
-        st.write("")
-        brain_img = Image.open("images/primary_brain_tumors.jpg")
-        st.image(brain_img, use_column_width='auto')
+  
                
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
       We have designed a deep convolutional neural network which can detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
