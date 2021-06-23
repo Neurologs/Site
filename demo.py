@@ -324,7 +324,7 @@ def page_alzheimer():
                     verif_is_mri(test_mri)
                     if verif_is_mri(test_mri) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
+                        Are you sure it is<br> a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
                     if verif_is_mri(test_mri) == 0:
                         analyse_alzheimer(test_img)
                                
@@ -357,7 +357,7 @@ def page_tumors():
         {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
         .st-e0 {width: 30px} .st-e1 {height: 30px} .st-en, .st-f0 {background-color: #12a67f} .st-eg {margin-left: 19px; margin-right: 14px;} 
         .st-ep {background-color:#fef3fe}
-        .st-ey {background-color: #fef3fe; width:700px}
+        .st-ey {background-color: #10515c}
         .css-9ycgxx.exg6vvm3 {color:white}
         .css-113fe4q.euu6i2w0 {color:gray}
         .css-1op0mqd.exg6vvm2 {color:yellow} 
@@ -365,36 +365,39 @@ def page_tumors():
         .row-widget.stButton{text-align:center}
         .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C} 
          html{background-color:#99c5c2}
-        .st-ew {background-color: #fef3fe}
          p{text-align:center; font_size:100%; font-weight:bold; color:#3b4a46}
         .css-rncmk8 > * {margin:0px}
-        .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
-        iframe {padding-right:25px; padding-left:20px}
+        .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around;} 
+        .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
+        @media screen and (max-width: 480px){.css-rncmk8{flex-flow: column wrap;}}
+        iframe {padding-right:25px; padding-left:20px}   
         </style>""", unsafe_allow_html=True)
-    
+
     st.write("")
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain tumors classifier</b><br><br></h1>"""
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
+    
     col1, col2 = st.beta_columns(2)
+    
     with col1:
         st.write("")
         st.write("")
-        st.components.v1.html("""
-        <p style="text-align:justify; font-size:18px; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
-        <p style="text-align:justify; font-size:14px; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
-        <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
-        <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
-        <p style="text-align:justify; font-size:14px; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p>
-        """, height=350)
+        st.write("""
+        <p style="text-align:left; font-size:100%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p><br>
+        """, unsafe_allow_html=True)
+        
     with col2:
         st.write("")
         st.write("")
         st.write("")
         brain_img = Image.open("images/primary_brain_tumors.jpg")
-        st.image(brain_img, width=320)
-        
-        
+        st.image(brain_img, use_column_width='auto')
+               
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
       We have designed a deep convolutional neural network which can detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
       The model has been trained with 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
@@ -428,17 +431,17 @@ def page_tumors():
                 up_image = cv2.cvtColor(up_image, cv2.COLOR_BGR2RGB)
                 resize_image = cv2.resize(up_image, (350, 350))
                 st.image(resize_image)
-                up_image = crop_image(up_image)
-                up_image = cv2.resize(up_image, (224, 224))
-                up_image = np.expand_dims(up_image, axis=0)
+                test_img = cv2.resize(up_image, (224, 224))
+                cropped_image = crop_image(up_image)
+                up_image = np.expand_dims(test_img, axis=0)
                 
             if generate_pred:
                 with col2:
-                    verif_is_mri(resize_image)
-                    if verif_is_mri(resize_image) == 1:
+                    verif_is_mri(up_image)
+                    if verif_is_mri(up_image) == 1:
                         components.html("""<div><br><p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br>
-                        Are you sure it is a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
-                    if verif_is_mri(resize_image) == 0:
+                        Are you sure it is<br> a brain scan image ?<br><br>Please upload another file.<br><br></p></div>""", height=200) 
+                    if verif_is_mri(up_image) == 0:
                         analyse_mri_tumors(up_image)
 
     if random_check and generate_pred:
@@ -457,6 +460,7 @@ def page_tumors():
 
 def MMSE_page():
     
+    st.write("")
     st.write("")
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Mini-Mental State Examination</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
