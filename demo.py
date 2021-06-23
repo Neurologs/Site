@@ -294,7 +294,7 @@ def page_alzheimer():
     image_alzheimer = Image.open("images/brain_alzheimer.jpg")
     st.image(image_alzheimer, caption = "van Oostveen, de Lange ; “Imaging Techniques in Alzheimer’s Disease: A Review of Applications in Early Diagnosis and Longitudinal Monitoring” in International Journal of Molecular Sciences. 2021; 22(4):2110.")
     st.write("""<p style="font-size:85%; color:#0c113899; text-align:left; font-weight:400">[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus]</p>""", unsafe_allow_html=True)
-    st.write("""<hr><p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. The model’s testing accuracy is near to 99%.<br><br>
+    st.write("""<hr><p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. Based on VGG16 (OxfordNet) architecture, the model’s testing accuracy is near to 99%.<br><br>
                 The data used to design the algorithm consists of 6400 preprocessed MRI (axial slices T1 weighted) categorized as non-demented, very mildly demented, mildly demented and moderately demented. Labels are based on the level of neurological degeneration as defined by the Global Deterioration Scale (or “Reisberg Scale”).<br><br>
                 Please upload a brain MRI or choose a random image to determine the stage of Alzheimer's disease the patient is experiencing.<br><br>
                 <u>Note</u> : you can also estimate the cognitive decline and eventually confirm the diagnosis of Alzheimer’s by administering the patient the Mini-mental State Examination.<br><br></p>""", unsafe_allow_html=True)
@@ -387,8 +387,8 @@ def page_tumors():
   
                
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
-      We have designed a deep convolutional neural network which can detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
-      The model has been trained with 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
+      We have designed a deep convolutional neural network aimed to detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
+      The model has been trained on 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
       The testing accuracy is up to 95%.<br><br>
       Please test our diagnosis tool : upload a brain scan or choose a random image and obtain the result in less than a minute !</p>"""
 
