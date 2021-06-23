@@ -392,6 +392,7 @@ def page_tumors():
     with col2:
         st.write("")
         st.write("")
+        st.write("")
         brain_img = Image.open("images/primary_brain_tumors.jpg")
         st.image(brain_img, width=330)
                
