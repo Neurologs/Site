@@ -461,8 +461,10 @@ def MMSE_page():
                 div.row-widget.stRadio > div{flex-direction:row;} .st-bg.st-bj.st-bk.st-bl.st-bm.st-bn.st-az.st-b4.st-bo.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-b2.st-by{background-color:#E2005B}
                 .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:120%; width:300px}                                                       
                 code, kbd {font-size: 120%; background-color:white; color: #bb0f6e;}
+                .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:600px;} 
+                .css-rncmk8.e1tzin5v0 {background-color: lightyellow;}
                 .css-rncmk8.e1tzin5v0 p {text-align: center}
-                .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width:600px}
+                @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
                 </style>""", unsafe_allow_html=True)
     
     st.write("")
@@ -657,13 +659,13 @@ def MMSE_page():
         adjusted_score = round(total_score * 30 / not_applicable)
     
     if adjusted_score >= 24:
-        result = """<p style="color:#051D31; font-size:22px; font-weight:bold; text-align:center;">Normal cognition : <br>no dementia<br><br><br></p>"""
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Normal cognition : <br>no dementia<br><br><br></p>"""
     elif adjusted_score < 24 and adjusted_score >= 19:
-        result = """<p style="color:#051D31; font-size:22px; font-weight:bold; text-align:center;">Mild<br><br><br></p>"""
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Mild<br><br><br></p>"""
     elif adjusted_score < 19 and adjusted_score >= 10:
-        result = """<p style="color:#051D31; font-size:22px; font-weight:bold; text-align:center;">Moderate<br><br><br></p>"""
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Moderate<br><br><br></p>"""
     elif adjusted_score < 10:
-        result = """<p style="color:#051D31; font-size:22px; font-weight:bold; text-align:center;">Severe<br><br><br></p>"""
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Severe<br><br><br></p>"""
     else: 
         result = "Error. Please retry."
     
@@ -683,13 +685,13 @@ def MMSE_page():
         
         with col1:
             st.write("")
-            st.write("""<h2 style="color:#12A67F; font-size:26px; font-weight:bold; text-align:center;">Total Score<hr></h2>""", unsafe_allow_html=True) 
+            st.write("""<h2 style="color:#12A67F; font-size:120%; font-weight:bold; text-align:center;">Total Score<hr></h2>""", unsafe_allow_html=True) 
             st.write(adjusted_score)
             st.write("")
             
         with col2:
             st.write("")
-            st.write("""<h2 style="color:#12A67F; font-size:26px; font-weight:bold; text-align:center;">Level of dementia<hr></h2>""", unsafe_allow_html=True) 
+            st.write("""<h2 style="color:#12A67F; font-size:120%; font-weight:bold; text-align:center;">Level of dementia<hr></h2>""", unsafe_allow_html=True) 
             st.write(result, unsafe_allow_html=True)
             st.write("")
         
