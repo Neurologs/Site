@@ -369,7 +369,8 @@ def page_tumors():
          p{text-align:center; font_size:100%; font-weight:bold; color:#3b4a46}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8.e1tzin5v0 {background-color: lightyellow; width: 700px; height: 350px}
-        @media screen and (max-width:780px){.css-rncmk8.e1tzin5v0{flex-flow:column wrap;}}
+        .css-rncmk8 {display: flex; flex-flow : row wrap;}
+        @media screen and (max-width: 780px){.css-rncmk8{flex-flow: column wrap;}}
         iframe {padding-right:25px; padding-left:20px}   
         </style>""", unsafe_allow_html=True)
 
@@ -390,6 +391,7 @@ def page_tumors():
         """, height=320)
         
     with col2:
+        st.write("")
         st.write("")
         st.write("")
         st.write("")
