@@ -367,7 +367,7 @@ def page_tumors():
          html{background-color:#99c5c2}
          p{text-align:center; font_size:100%; font-weight:bold; color:#3b4a46}
         .css-rncmk8 > * {margin:0px}
-        .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:700px} 
+        .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around;} 
         .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
         @media screen and (max-width: 480px){.css-rncmk8{flex-flow: column wrap;}}
         iframe {padding-right:25px; padding-left:20px}   
