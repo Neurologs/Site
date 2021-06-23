@@ -365,7 +365,6 @@ def page_tumors():
         .row-widget.stButton{text-align:center}
         .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C} 
          html{background-color:#99c5c2}
-        .st-ew {background-color: #fef3fe}
          p{text-align:center; font_size:100%; font-weight:bold; color:#3b4a46}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; background-color: lightyellow;} 
@@ -382,7 +381,7 @@ def page_tumors():
     with col1:
         st.write("")
         st.components.v1.html("""
-        <p style="text-align:right; font-size:110%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
+        <p style="text-align:left; font-size:110%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
@@ -394,7 +393,7 @@ def page_tumors():
         st.write("")
         st.write("")
         brain_img = Image.open("images/primary_brain_tumors.jpg")
-        st.image(brain_img, width=310)
+        st.image(brain_img, width=320)
                
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
       We have designed a deep convolutional neural network which can detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
