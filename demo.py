@@ -396,7 +396,7 @@ def page_tumors():
         st.write("")
         st.write("")
         brain_img = Image.open("images/primary_brain_tumors.jpg")
-        st.image(brain_img, width='auto')
+        st.image(brain_img)
                
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
       We have designed a deep convolutional neural network which can detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
