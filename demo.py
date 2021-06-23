@@ -378,7 +378,7 @@ def page_tumors():
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
     
-    st.image("images/tumors_pres", use_column_width='auto')
+    st.image("images/tumors_pres.jpg", use_column_width='auto')
     
   
                
