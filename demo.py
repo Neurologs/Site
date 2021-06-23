@@ -111,38 +111,42 @@ def analyse_mri_tumors(test_image):
         class_prediction = np.argmax(prediction)
 
         if class_prediction == 0:
-            st.write("""<p style="text-align:center; font-size:140%; color:#115764"><br><b>--  RESULT  --</b></p><br>
-                     <p style="background-color:#F63366; text-align:center; font-size:130%; color:white"><br><b>Tumor detected</b><br><br></p>
-                     <p style="text-align:center; font-size:120%; color:#115764">Classified as <span style="color:red"><b>glioma</b></span> tumor.</p><br>
+            st.write("""<p style="text-align:center; font-size:130%; color:#115764"><br><b>--  RESULT  --</b></p><br>
+                     <p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br><b>Tumor detected</b><br><br></p>
+                     <p style="text-align:center; font-size:100%; color:#115764">Classified as <span style="color:red"><b>glioma</b></span> tumor.</p><br>
                      """, unsafe_allow_html=True)
             st.write(predict_proba)
+            st.write("")
           
 
         elif class_prediction == 1:
-            st.write("""<p style="text-align:center; font-size:140%; color:#115764"><br><b>--  RESULT  --</b></p><br>
-                     <p style="background-color:#F63366; text-align:center; font-size:130%; color:white"><br><b>Tumor detected</b><br><br></p>
-                     <p style="text-align:center; font-size:120%; color:#115764">Classified as <span style="color:#1848b3"><b>meningioma</b></span> tumor.</p><br>
+            st.write("""<p style="text-align:center; font-size:130%; color:#115764"><br><b>--  RESULT  --</b></p><br>
+                     <p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br><b>Tumor detected</b><br><br></p>
+                     <p style="text-align:center; font-size:100%; color:#115764">Classified as <span style="color:#1848b3"><b>meningioma</b></span> tumor.</p><br>
                      """, unsafe_allow_html=True) 
             st.write(predict_proba)
+            st.write("")
            
 
         elif class_prediction == 2:
-            st.write("""<p style="text-align:center; font-size:140%; color:#115764"><br><b>--  RESULT  --</b></p><br>
-                      <p style="background-color:#9CFF8B; text-align:center; font-size:130%; color:#115764"><br><b>There is no tumor</b><br><br></p><br>
+            st.write("""<p style="text-align:center; font-size:130%; color:#115764"><br><b>--  RESULT  --</b></p><br>
+                      <p style="background-color:#9CFF8B; text-align:center; font-size:120%; color:#115764"><br><b>There is no tumor</b><br><br></p><br>
                      """, unsafe_allow_html=True)
             st.write(predict_proba)
+            st.write("")
 
 
         elif class_prediction == 3:
-            st.write("""<p style="text-align:center; font-size:140%; color:#115764"><br><b>--  RESULT  --</b></p><br>
-                     <p style="background-color:#F63366; text-align:center; font-size:130%; color:white"><br><b>Tumor detected</b><br><br></p>
-                     <p style="text-align:center; font-size:120%; color:#115764">Classified as <span style="color:#1dbf4f"><b>pituitary</b></span> tumor.</p><br>
+            st.write("""<p style="text-align:center; font-size:130%; color:#115764"><br><b>--  RESULT  --</b></p><br>
+                     <p style="background-color:#F63366; text-align:center; font-size:120%; color:white"><br><b>Tumor detected</b><br><br></p>
+                     <p style="text-align:center; font-size:100%; color:#115764">Classified as <span style="color:#1dbf4f"><b>pituitary</b></span> tumor.</p><br>
                      """, unsafe_allow_html=True)
             st.write(predict_proba)
+            st.write("")
   
         else:
-            st.write("""<p style="text-align:center; font-size:140%; color:#115764"><br><b>--  RESULT  --</b></p><br>
-                     <p style="text-align:center; font-size:120%; color:#115764"><b>Error. The algorithm failed to predict the outcome. Please try again.</p><br>
+            st.write("""<p style="text-align:center; font-size:130%; color:#115764"><br><b>--  RESULT  --</b></p><br>
+                     <p style="text-align:center; font-size:100%; color:#115764"><b>Error. The algorithm failed to predict the outcome. Please try again.</p><br>
                      """, unsafe_allow_html=True)
           
 def analyse_alzheimer(test_img):
