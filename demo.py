@@ -252,7 +252,7 @@ def homepage():
 def page_alzheimer():
      
     st.write("""<style>
-                .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek {padding-left: 6px; padding-top:5px}                                        
+                .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek, .st-el {padding-left: 6px; padding-top:5px}                                        
                 .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
                  {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
