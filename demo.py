@@ -382,6 +382,7 @@ def page_tumors():
     
     with col1:
         st.write("")
+        st.write("")
         st.components.v1.html("""
         <p style="text-align:left; font-size:100%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
         <p style="text-align:justify; font-size:88%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
