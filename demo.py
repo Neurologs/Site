@@ -384,10 +384,10 @@ def page_tumors():
         st.write("")
         st.components.v1.html("""
         <p style="text-align:left; font-size:100%; color:#3b4a46; font-weight:bold">Most common primary brain tumors</p>
-        <p style="text-align:justify; font-size:85%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
-        <p style="text-align:justify; font-size:85%; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
-        <p style="text-align:justify; font-size:85%; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
-        <p style="text-align:justify; font-size:85%; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p><br>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
+        <p style="text-align:justify; font-size:88%; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p><br>
         """, height=340)
         
     with col2:
