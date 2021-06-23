@@ -459,10 +459,10 @@ def MMSE_page():
                 .st-bq{color:#3A4044}
                 .time{color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} .st-bg.st-bj.st-bk.st-bl.st-bm.st-bn.st-az.st-b4.st-bo.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-b2.st-by{background-color:#E2005B}
-                .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; width:450px; height:60px} 
+                .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
                 code, kbd {font-size: 120%; background-color:white; color: #bb0f6e;}
                 .css-1w0ubgf {background-color: lightyellow; height:250px}
-                p .css-rncmk8.e1tzin5v0 {text-align: center}
+                .css-rncmk8.e1tzin5v0 p {text-align: center}
                 </style>""", unsafe_allow_html=True)
     
     st.write("")
