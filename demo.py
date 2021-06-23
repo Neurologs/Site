@@ -369,7 +369,7 @@ def page_tumors():
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:700px} 
         .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
-        @media screen and (max-width: 780px){.css-rncmk8{flex-flow: column wrap;}}
+        @media screen and (max-width: 480px){.css-rncmk8{flex-flow: column wrap;}}
         iframe {padding-right:25px; padding-left:20px}   
         </style>""", unsafe_allow_html=True)
 
@@ -387,15 +387,16 @@ def page_tumors():
         <p style="text-align:justify; font-size:90%; color:#3b4a46">Primary brain tumors are tumors that originate from the tissues of the brain or the brain’s immediate surroundings.</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:red; font-weight:bold">Gliomas</span> arise from the gluey supportive cells of the brain («glia»). These are the most prevalent type of adult brain tumors, accounting for 78% of cancerous brain tumors.</p>
         <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:navy; font-weight:bold">Meningiomas</span> originate from the meninges. These are the most common benign intracranial tumors.</p>
-        <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p><br>
+        <p style="text-align:justify; font-size:90%; color:#3b4a46"><span style="color:green; font-weight:bold">Pituitary tumors</span> form in the pituitary gland. Most of these tumors are benign and slow-growing.</p><br><br>
         """, height=350)
         
     with col2:
         st.write("")
         st.write("")
         st.write("")
+        st.write("")
         brain_img = Image.open("images/primary_brain_tumors.jpg")
-        st.image(brain_img, width=330)
+        st.image(brain_img, width=340)
                
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
       We have designed a deep convolutional neural network which can detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
