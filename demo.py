@@ -243,7 +243,7 @@ def homepage():
     and improved personalized treatments.<br><br>
     Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p><br><br>""", unsafe_allow_html=True)
 
-    image_platform = "images/platform.jpg"
+    image_platform = Image.open("images/platform.jpg")
     file_image = np.asarray(bytearray(image_platform, dtype=np.uint8)
     file_image = cv2.imdecode(file_image, cv2.IMREAD_ANYCOLOR)
     platform_resize = cv2.resize(file_image, (900,400))
