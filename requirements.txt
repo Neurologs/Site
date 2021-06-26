@@ -5,3 +5,4 @@ opencv_python-headless==4.5.2.52
 numpy==1.19.2
 streamlit==0.82.0
 Pillow==8.2.0
+PyYAML==5.3.1
