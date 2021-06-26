@@ -233,20 +233,23 @@ def main():
 def homepage():
     st.write("")
     st.write("")
-    title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain disorders : a global epidemic</b><br><br></h1>"""
-    st.markdown(title, unsafe_allow_html=True)
-    with st.beta_container():
-        image_app = Image.open("images/home_map.jpg")
-        st.image(image_app, use_column_width=True)
+    st.write("""<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain disorders : a global epidemic</b><br><br></h1>""", unsafe_allow_html=True)
+    
+    image_map = "images/home_map.jpg
+    st.image(image_map, use_column_width=True)
 
-    home_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
-      As well as a formidable challenge.<br><br>
-      At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine by providing efficient tools and relevant solutions for innovative therapeutic approaches 
+    st.write("""<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
+    As well as a formidable challenge.<br><br>
+    At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine by providing efficient tools and relevant solutions for innovative therapeutic approaches 
     and improved personalized treatments.<br><br>
-      Please use the navigation bar (on the left) to discover and test the first AI-powered tools we have designed for clinical diagnosis, treatment and research in the field of brain disorders.</p>"""
-    st.markdown(home_text, unsafe_allow_html=True)
+    Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p>""", unsafe_allow_html=True)
 
+    image_platform = Image.open("images/platform.jpg")
+    st.image(image_platform, use_column_width=True)
+    
+    st.write("""<p>Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
 
+    
 # PAGE ALZHEIMER
 
 def page_alzheimer():
