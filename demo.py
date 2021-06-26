@@ -241,14 +241,14 @@ def homepage():
     As well as a formidable challenge.<br><br>
     At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine by providing efficient tools and relevant solutions for innovative therapeutic approaches 
     and improved personalized treatments.<br><br>
-    Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p><br>""", unsafe_allow_html=True)
+    Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p>""", unsafe_allow_html=True)
     st.write("")
     
     platform = "images/platform.jpg"
     st.image(platform, use_column_width=True)
     st.write("")
     
-    st.write("""<p style = "color:#12A67F; font-family:Gadugi; font-weight:bold">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
+    st.write("""<p style = "color:#12A67F; font-family:Gadugi; font-weight:bold; text-align:justify">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
 
     
 # PAGE ALZHEIMER
