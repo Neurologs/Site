@@ -237,16 +237,19 @@ def homepage():
     image_map = "images/home_map.jpg"
     st.image(image_map, use_column_width=True)
 
-    st.write("""<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
+    st.write("""<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450; font-family:Gadugi;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
     As well as a formidable challenge.<br><br>
     At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine by providing efficient tools and relevant solutions for innovative therapeutic approaches 
     and improved personalized treatments.<br><br>
-    Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p>""", unsafe_allow_html=True)
+    Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p><br><br>""", unsafe_allow_html=True)
 
     image_platform = "images/platform.jpg"
-    st.image(image_platform, use_column_width=True)
+    file_image = np.asarray(bytearray(image_platform, dtype=np.uint8)
+    file_image = cv2.imdecode(file_image, cv2.IMREAD_ANYCOLOR)
+    platform_resize = cv2.resize(file_image, (900,400))
+    st.image(platform_resize, use_column_width=True)
     
-    st.write("""<p>Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
+    st.write("""<p style = "color:#12A67F; font-family:Gadugi; font-weight:450">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
 
     
 # PAGE ALZHEIMER
