@@ -703,11 +703,13 @@ def MMSE_page():
 def ongoing_page():
     st.write("")
     st.write("")
-    title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Ongoing projects</b></h1><br>"""
-    st.markdown(title, unsafe_allow_html=True)
+    st.write("""<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Ongoing projects</b></h1><br>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("")
+    image_projects = "images/ongoing_projects.jpg"
+    st.image(image_projects, use_column_width=True)
 
-
-
+    
 # CALL MAIN FUNCTION (MENU)
 
 if __name__ == "__main__":
