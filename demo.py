@@ -243,10 +243,8 @@ def homepage():
     and improved personalized treatments.<br><br>
     Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p><br><br>""", unsafe_allow_html=True)
 
-    image_platform = open("images/platform.jpg").read()
-    file_image = cv2.imdecode(np.fromstring(image_platform, dtype='uint8'), cv2.IMREAD_ANYCOLOR)
-    platform_resize = cv2.resize(file_image, (900,400))
-    st.image(platform_resize, use_column_width=True)
+    platform = "images/platform2.jpg"
+    st.image(platform, use_column_width=True)
     
     st.write("""<p style = "color:#12A67F; font-family:Gadugi; font-weight:450">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
 
