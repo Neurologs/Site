@@ -206,8 +206,7 @@ def analyse_alzheimer(test_img):
 # NAVIGATION BAR
 
 with st.sidebar:
-    logo = Image.open(
-        "images/logo_app.jpg")
+    logo = Image.open("images/logo_app.jpg")
     st.image(logo)
     signature = """<h2 style = "text_align:center; color:white; font-family:Gadugi;"><b>AI for brain health<b></h2>
                    <hr>"""
@@ -235,7 +234,7 @@ def homepage():
     st.write("")
     st.write("""<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain disorders : a global epidemic</b><br><br></h1>""", unsafe_allow_html=True)
     
-    image_map = "images/home_map.jpg
+    image_map = "images/home_map.jpg"
     st.image(image_map, use_column_width=True)
 
     st.write("""<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency.<br><br>
@@ -244,7 +243,7 @@ def homepage():
     and improved personalized treatments.<br><br>
     Our team is currently working on providing a complete medical decision-support software for clinicians and researchers specialized in neurological and mental disorders.</p>""", unsafe_allow_html=True)
 
-    image_platform = Image.open("images/platform.jpg")
+    image_platform = "images/platform.jpg"
     st.image(image_platform, use_column_width=True)
     
     st.write("""<p>Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
