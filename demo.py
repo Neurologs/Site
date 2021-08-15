@@ -388,16 +388,15 @@ def page_tumors():
     st.write("")
     
     section1 = st.write("""<h3 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>1. Tumors Classifier </b><br><br></h3>""", unsafe_allow_html=True)
+    st.write("")
     
     st.image("images/tumors_pres.jpg", use_column_width='auto')
         
-    tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
+    tumors_text = st.write("""<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
       We have designed a deep convolutional neural network aimed to detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
       The model has been trained on 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
       The model's accuracy is up to 95%.<br><br>
-      Please test our diagnosis tool : upload a brain scan or choose a random image and obtain the result in less than a minute !</p>"""
-
-    st.markdown(tumors_text, unsafe_allow_html=True)
+      Please test our diagnosis tool : upload a brain scan or choose a random image and obtain the result in less than a minute !</p>""", unsafe_allow_html=True)
 
     st.write("")
     uploaded_file = st.file_uploader('')
@@ -408,8 +407,6 @@ def page_tumors():
     generate_pred = st.button("Prediction")
     st.write("")
     st.write("")
-    
-
 
     if uploaded_file is not None:
         
@@ -443,15 +440,17 @@ def page_tumors():
             st.write("")
             st.write("")
             col1, col2 = st.beta_columns(2)
+            
             with col1:
                 file_test_tumors = "tumors_random"
                 rand_image = random_scan_tumors(file_test_tumors)
 
             with col2:
                 analyse_mri_tumors(rand_image)
-     
+                
+    st.write("")
     section2 = st.write("""<h3 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Tumors Segmentation</b><br><br></h3>""", unsafe_allow_html=True)
-     
+    st.write("")
                      
 # PAGE MMSE
 
