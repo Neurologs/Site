@@ -383,15 +383,13 @@ def page_tumors():
         @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
         </style>""", unsafe_allow_html=True)
 
+    title = st.write("""<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain tumors</b><br><br></h1>""", unsafe_allow_html=True)
     st.write("")
-    title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain tumors classifier</b><br><br></h1>"""
-    st.markdown(title, unsafe_allow_html=True)
-    st.write("")
+    
+    section1 = st.write('Tumors classifier')
     
     st.image("images/tumors_pres.jpg", use_column_width='auto')
-    
-  
-               
+        
     tumors_text = """<p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;"><br>
       We have designed a deep convolutional neural network aimed to detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
       The model has been trained on 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
@@ -409,7 +407,6 @@ def page_tumors():
     generate_pred = st.button("Prediction")
     st.write("")
     st.write("")
-
 
     if uploaded_file is not None:
         
@@ -449,6 +446,8 @@ def page_tumors():
 
             with col2:
                 analyse_mri_tumors(rand_image)
+     
+      section2 = st.write('Tumors segmentation')
                      
 # PAGE MMSE
 
