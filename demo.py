@@ -451,6 +451,10 @@ def page_tumors():
     st.write("")
     section2 = st.write("""<h3 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Tumors Segmentation</b><br><br></h3>""", unsafe_allow_html=True)
     st.write("")
+    
+    demo_selection = st.selectbox('', ['Demo 1', 'Demo 2', 'Demo 3'])
+    
+    segmentation_button = st.button('Tumor Segmentation')
                      
 # PAGE MMSE
 
