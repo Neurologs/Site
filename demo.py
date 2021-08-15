@@ -348,6 +348,7 @@ def page_alzheimer():
             st.write("")
             st.write("")
             col1, col2 = st.beta_columns(2)
+            
             with col1:
                 rand_image = cv2.resize(rand_image, (350,350))
                 st.image(rand_image)
@@ -407,6 +408,8 @@ def page_tumors():
     generate_pred = st.button("Prediction")
     st.write("")
     st.write("")
+    
+
 
     if uploaded_file is not None:
         
@@ -447,7 +450,7 @@ def page_tumors():
             with col2:
                 analyse_mri_tumors(rand_image)
      
-     section2 = st.write('Tumors segmentation')
+    section2 = st.write('Tumors segmentation')  
                      
 # PAGE MMSE
 
