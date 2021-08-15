@@ -387,7 +387,7 @@ def page_tumors():
     title = st.write("""<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain tumors</b><br><br></h1>""", unsafe_allow_html=True)
     st.write("")
     
-    section1 = st.write('Tumors classifier')
+    section1 = st.write("""<h3 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>1. Tumors Classifier </b><br><br></h3>""", unsafe_allow_html=True)
     
     st.image("images/tumors_pres.jpg", use_column_width='auto')
         
@@ -450,7 +450,8 @@ def page_tumors():
             with col2:
                 analyse_mri_tumors(rand_image)
      
-    section2 = st.write('Tumors segmentation')  
+    section2 = st.write("""<h3 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Tumors Segmentation</b><br><br></h3>""", unsafe_allow_html=True)
+     
                      
 # PAGE MMSE
 
