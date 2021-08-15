@@ -447,7 +447,7 @@ def page_tumors():
             with col2:
                 analyse_mri_tumors(rand_image)
      
-      section2 = st.write('Tumors segmentation')
+     section2 = st.write('Tumors segmentation')
                      
 # PAGE MMSE
 
