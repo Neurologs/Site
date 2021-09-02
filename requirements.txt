@@ -6,9 +6,3 @@ numpy==1.19.2
 streamlit==0.82.0
 Pillow==8.2.0
 PyYAML==5.3.1
-nibabel==3.2.1
-nilearn==0.7.1
-keras==2.6.0
-keras_nightly==2.5.0.dev2021032900
-pandas==1.2.4
-matplotlib==3.3.4
