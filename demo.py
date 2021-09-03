@@ -243,7 +243,7 @@ def homepage():
     st.image(platform, use_column_width=True)
     st.write("")
     
-    st.write("""<p style = "color:#12A67F; font-family:Gadugi; font-weight:bold; text-align:justify">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we have developing.</p>""", unsafe_allow_html=True)
+    st.write("""<p style = "color:#12A67F; font-family:Gadugi; font-weight:bold; text-align:justify">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we are developing.</p>""", unsafe_allow_html=True)
 
     
 # PAGE ALZHEIMER
