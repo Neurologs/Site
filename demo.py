@@ -239,7 +239,7 @@ def homepage():
     Our teams works to provide healthcare professionals a comprehensive cloud-based Platform with AI-assisted diagnostics solutions, personalized treatment recommendation systems and tools for clinical research in the field of brain disorders.</p>""", unsafe_allow_html=True)
     st.write("")
       
-    platform = "images/platform.jpg"
+    platform = "images/Platform_slide.jpg"
     st.image(platform, use_column_width=True)
     st.write("")
     
