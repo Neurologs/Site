@@ -231,7 +231,7 @@ def homepage():
     image_map = "images/home_map.jpg"
     st.image(image_map, use_column_width=True)
 
-    st.write("""<p style="font-size:105%; color:#3b4a46; font-weight:450; font-family:Gadugi;"><br>Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency. As well as a formidable challenge.<br><br>
+    st.write("""<br><p style="font-size:105%; color:#3b4a46; font-weight:450; text-align:left">Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency. As well as a formidable challenge.<br><br>
     At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine.<br><br>
     Our teams works to provide healthcare professionals a comprehensive cloud-based Platform with AI-assisted diagnostics solutions, personalized treatment recommendation systems and tools for clinical research in the field of brain disorders.</p>""", unsafe_allow_html=True)
     st.write("")
@@ -365,7 +365,7 @@ def page_tumors():
         .css-1qpos38 {background-color:#12A67F; color:white; font-size:18px} 
         .row-widget.stButton{text-align:center}
         .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C} 
-         p{font_size:100%; text-align:center; font-weight:bold; color:#3b4a46}
+         p {font_size:100%; text-align:center; font-weight:bold; color:#3b4a46}
          label {display: inline-flex}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
