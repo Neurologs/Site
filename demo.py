@@ -265,7 +265,7 @@ def page_alzheimer():
                 label {display: inline-flex}
                 .uploadedFileData.css-1l4firl.exg6vvm8 {color:#10515C}
                 .css-rncmk8 > * {margin:0px}
-                 p {text_align:justify; font_size:18px; color:#3b4a46; font-weight:bold}
+                 p {text_align:center; font_size:18px; color:#3b4a46; font-weight:bold}
                 .css-1p9wfzo {color: #0c113899; text-align: left; margin-top: 1.5em; font-weight:400; font-size:85%}
                 .css-rncmk8 > * {margin:0px}
                 .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
@@ -368,7 +368,7 @@ def page_tumors():
         .css-1qpos38 {background-color:#12A67F; color:white; font-size:18px} 
         .row-widget.stButton{text-align:center}
         .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C} 
-         p{font_size:100%; font-weight:bold; color:#3b4a46}
+         p{font_size:100%; text_align:center; font-weight:bold; color:#3b4a46}
          label {display: inline-flex}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
