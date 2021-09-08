@@ -6,8 +6,8 @@ import imutils
 from PIL import Image
 import os
 import random
-from tensorflow.python.keras.utils import generic_utils
-from tensorflow.keras import models
+import tensorflow as tf
+from tensorflow import keras
 from keras.models import model_from_yaml, load_model
 import h5py
 
