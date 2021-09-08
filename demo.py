@@ -221,7 +221,7 @@ def main():
     page = st.sidebar.selectbox("", tuple(pages.keys()))
     pages[page]()
     st.markdown(
-        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br {font-weight: bold; color: #26ca9f;}</style>""", unsafe_allow_html=True)
+        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br {font-weight: bold; color: #26ca9f;} .st-bq {color: #f2f7a4;}</style>""", unsafe_allow_html=True)
 
 # HOMEPAGE
 
