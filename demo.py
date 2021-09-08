@@ -265,7 +265,7 @@ def page_alzheimer():
                 label {display: inline-flex}
                 .uploadedFileData.css-1l4firl.exg6vvm8 {color:#10515C}
                 .css-rncmk8 > * {margin:0px}
-                 p {font_size:18px; color:#3b4a46; font-weight:bold}
+                 p {text_align:justify; font_size:18px; color:#3b4a46; font-weight:bold}
                 .css-1p9wfzo {color: #0c113899; text-align: left; margin-top: 1.5em; font-weight:400; font-size:85%}
                 .css-rncmk8 > * {margin:0px}
                 .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
