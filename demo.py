@@ -220,7 +220,8 @@ def main():
 
     page = st.sidebar.selectbox("", tuple(pages.keys()))
     pages[page]()
-    st.write("""<style>.st-br .st-bq {font-weight: bold; color: #26ca9f;}</style>""", unsafe_allow_html=True)
+
+st.write("""<style>.st-br .st-bq {font-weight: bold; color: #26ca9f;}</style>""", unsafe_allow_html=True)
 
 # HOMEPAGE
 
