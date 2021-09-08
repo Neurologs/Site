@@ -199,7 +199,7 @@ def analyse_alzheimer(test_img):
 
 # NAVIGATION BAR
 
- st.markdown("""<style>st-bv st-av st-aw st-ax st-ay st-bq st-bd{font-weight: bold; color: #26ca9f;} </style>""", unsafe_allow_html=True)
+st.markdown("""<style>st-bv st-av st-aw st-ax st-ay st-bq st-bd{font-weight: bold; color: #26ca9f;} </style>""", unsafe_allow_html=True)
 
 with st.sidebar:
     logo = Image.open("images/logo_app.jpg")
