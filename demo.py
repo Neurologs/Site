@@ -6,7 +6,7 @@ import imutils
 from PIL import Image
 import os
 import random
-from keras.models import load_model
+from tensorflow.keras import models
 from keras.models import model_from_yaml
 import h5py
 
