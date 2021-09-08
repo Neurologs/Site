@@ -116,7 +116,6 @@ def analyse_mri_tumors(test_image):
             st.write(predict_proba)
             st.write("")
           
-
         elif class_prediction == 1:
             st.write("""<p style="text-align:center; font-size:120%; color:#115764"><br><b>--  RESULT  --</b></p><br>
                      <p style="background-color:#F63366; text-align:center; font-size:130%; color:white"><br><b>Tumor detected</b><br><br></p>
@@ -125,14 +124,12 @@ def analyse_mri_tumors(test_image):
             st.write(predict_proba)
             st.write("")
            
-
         elif class_prediction == 2:
             st.write("""<p style="text-align:center; font-size:120%; color:#115764"><br><b>--  RESULT  --</b></p><br>
                       <p style="background-color:#9CFF8B; text-align:center; font-size:130%; color:#115764"><br><b>There is no tumor</b><br><br></p><br>
                      """, unsafe_allow_html=True)
             st.write(predict_proba)
             st.write("")
-
 
         elif class_prediction == 3:
             st.write("""<p style="text-align:center; font-size:120%; color:#115764"><br><b>--  RESULT  --</b></p><br>
@@ -265,7 +262,7 @@ def page_alzheimer():
                 label {display: inline-flex}
                 .uploadedFileData.css-1l4firl.exg6vvm8 {color:#10515C}
                 .css-rncmk8 > * {margin:0px}
-                 p {text_align:center; font_size:18px; color:#3b4a46; font-weight:bold}
+                 p {text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
                 .css-1p9wfzo {color: #0c113899; text-align: left; margin-top: 1.5em; font-weight:400; font-size:85%}
                 .css-rncmk8 > * {margin:0px}
                 .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
@@ -368,7 +365,7 @@ def page_tumors():
         .css-1qpos38 {background-color:#12A67F; color:white; font-size:18px} 
         .row-widget.stButton{text-align:center}
         .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C} 
-         p{font_size:100%; text_align:center; font-weight:bold; color:#3b4a46}
+         p{font_size:100%; text-align:center; font-weight:bold; color:#3b4a46}
          label {display: inline-flex}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
