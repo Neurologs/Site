@@ -277,12 +277,12 @@ def page_alzheimer():
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
     st.write("")
-    st.write("""<p style="font-size:100%; color:#3b4a46; font-weight:450;">In 2020, there are over 50 million people worldwide living with dementia. 
+    st.write("""<p style="font-size:105%; color:#3b4a46; font-weight:450;">In 2020, there are over 50 million people worldwide living with dementia. 
              With population ageing and growth, this number will almost double every 20 years, reaching 82 million in 2030 and 152 million in 2050. 
              Moreover, the economic impact of dementia is already enormous, with total estimated worldwilde costs greater than US$ 1 trillion every year.<br><br>
              Alzheimer’s disease (AD) is the most common form of dementia accounting for an estimated 60% to 80% of cases. Since there is no effective Alzheimer’s treatment to date, 
              early diagnosis and measures to reduce or prevent further progression of disease are crucial.<hr></p>
-             <p style="font-size:100%; color:#3b4a46; font-weight:450;">AD is characterized by the formation of amyloid plaques and neurofibrillary tangles, resulting from accumulation of abnormal amounts of amyloid-β [Aβ] and hyperphosphorylated tau proteins, 
+             <p style="font-size:105%; color:#3b4a46; font-weight:450;">AD is characterized by the formation of amyloid plaques and neurofibrillary tangles, resulting from accumulation of abnormal amounts of amyloid-β [Aβ] and hyperphosphorylated tau proteins, 
              respectively outside and inside brain neurons. These plaques and tangles cause various synaptic, neuronal and axonal damage which lead to progressive cognitive and functional decline until death.<br><br>
              Multiple imaging techniques with associated biomarkers are used to identify and monitor AD. For example, cerebral atrophy, which is considered a characteristic feature of neurodegeneration, 
              can be visualized with structural MRI. Indeed, degrees and rate of brain volume loss (especially hippocampus and medial temporal lobe volumes) as well as shrinkage of cerebral cortex and ventricular enlargement 
@@ -293,7 +293,7 @@ def page_alzheimer():
     image_alzheimer = Image.open("images/brain_alzheimer.jpg")
     st.image(image_alzheimer, caption = "van Oostveen, de Lange ; “Imaging Techniques in Alzheimer’s Disease: A Review of Applications in Early Diagnosis and Longitudinal Monitoring” in International Journal of Molecular Sciences. 2021; 22(4):2110.")
     st.write("""<p style="font-size:85%; color:#0c113899; text-align:left; font-weight:400">[AD leads to decreased hippocampal volume, shrinkage of cerebral cortex and ventricle enlargement. MTA: medial temporal lobe atrophy; MTA = 0: no atrophy in medial temporal lobe; MTA = 4: severe volume loss of hippocampus]</p>""", unsafe_allow_html=True)
-    st.write("""<hr><p style="font-size:100%; color:#3b4a46; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. Based on VGG16 (OxfordNet) architecture, the model achieves accuracy higher than 98%.<br><br>
+    st.write("""<hr><p style="font-size:105%; color:#3b4a46; font-weight:450;">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. Based on VGG16 (OxfordNet) architecture, the model achieves accuracy higher than 98%.<br><br>
                 The data used to design the algorithm consists of 6400 preprocessed MRI (axial slices T1 weighted) categorized as non-demented, very mildly demented, mildly demented and moderately demented. Labels are based on the level of neurological degeneration as defined by the Global Deterioration Scale (or “Reisberg Scale”).<br><br>
                 Please upload a brain MRI or choose a random image to determine the stage of Alzheimer's disease the patient is experiencing.<br><br>
                 <u>Note</u> : you can also estimate the cognitive decline and eventually confirm the diagnosis of Alzheimer’s by administering the patient the Mini-mental State Examination.<br><br></p>""", unsafe_allow_html=True)
@@ -381,10 +381,8 @@ def page_tumors():
     st.write("")
     
     st.image("images/tumors_pres.jpg", use_column_width='auto')
-    
-  
-               
-    tumors_text = """<p style="font-size:100%; color:#3b4a46; font-weight:450;"><br>
+           
+    tumors_text = """<p style="font-size:105%; color:#3b4a46; font-weight:450;"><br>
       We have designed a deep convolutional neural network aimed to detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
       The model has been trained on 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
       The model's accuracy is up to 95%.<br><br>
