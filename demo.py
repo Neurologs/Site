@@ -221,7 +221,7 @@ def main():
     page = st.sidebar.selectbox("", tuple(pages.keys()))
     pages[page]()
     st.markdown(
-        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br {font-weight: bold; color: #26ca9f;} .st-bq {color: #f2f7a4;}</style>""", unsafe_allow_html=True)
+        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br .st-bq {font-weight: bold; color: #26ca9f;} </style>""", unsafe_allow_html=True)
 
 # HOMEPAGE
 
@@ -282,7 +282,7 @@ def page_alzheimer():
              Moreover, the economic impact of dementia is already enormous, with total estimated worldwilde costs greater than US$ 1 trillion every year.<br><br>
              Alzheimer’s disease (AD) is the most common form of dementia accounting for an estimated 60% to 80% of cases. Since there is no effective Alzheimer’s treatment to date, 
              early diagnosis and measures to reduce or prevent further progression of disease are crucial.<hr></p>
-             <p style="font-size:100%; color:#3b4a46; text-align:justify; font-weight:450;">AD is characterized by the formation of amyloid plaques and neurofibrillary tangles, resulting from accumulation of abnormal amounts of amyloid-β [Aβ] and hyperphosphorylated tau proteins, 
+             <p style="font-size:100%; color:#3b4a46; font-weight:450;">AD is characterized by the formation of amyloid plaques and neurofibrillary tangles, resulting from accumulation of abnormal amounts of amyloid-β [Aβ] and hyperphosphorylated tau proteins, 
              respectively outside and inside brain neurons. These plaques and tangles cause various synaptic, neuronal and axonal damage which lead to progressive cognitive and functional decline until death.<br><br>
              Multiple imaging techniques with associated biomarkers are used to identify and monitor AD. For example, cerebral atrophy, which is considered a characteristic feature of neurodegeneration, 
              can be visualized with structural MRI. Indeed, degrees and rate of brain volume loss (especially hippocampus and medial temporal lobe volumes) as well as shrinkage of cerebral cortex and ventricular enlargement 
