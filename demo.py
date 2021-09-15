@@ -396,10 +396,10 @@ def page_tumors():
     st.image("images/tumors_pres.jpg", use_column_width='auto')
            
     tumors_text = """<p style="font-size:105%; color:#3b4a46; font-weight:450; text-align:left"><br>
-      We have designed a deep convolutional neural network aimed to detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
-      The model has been trained on 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
-      The model's accuracy is up to 95%.<br><br>
-      Please test our diagnosis tool : upload a brain scan or choose a random image and obtain the result in less than a minute !</p>"""
+    We have designed a deep convolutional neural network aimed to detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
+    The model has been trained on 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
+    The model's accuracy is up to 95%.<br><br>
+    Please test our diagnosis tool : upload a brain scan or choose a random image and obtain the result in less than a minute !</p>"""
 
     st.markdown(tumors_text, unsafe_allow_html=True)
 
@@ -463,21 +463,21 @@ def page_tumors():
     st.write("")
     
     if demo_selection == 'Demo 1':
-        image_t1_ce = nib.load('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain1/t1ce.nii').get_fdata()
-        niimg = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain1/flair.nii')
-        nimask = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain1/seg.nii')
+        image_t1_ce = nib.load("Demo1/t1ce.nii").get_fdata()  "Demo1/t1ce.nii"
+        niimg = nl.image.load_img("Demo1/flair.nii")
+        nimask = nl.image.load_img("Demo1/seg.nii")
         cut = [118, -90, 75]
     
     if demo_selection == 'Demo 2':
-        image_t1_ce = nib.load('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain2/t1ce.nii').get_fdata()
-        niimg = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain2/flair.nii')
-        nimask = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain2/seg.nii')
+        image_t1_ce = nib.load("Demo2/t1ce.nii").get_fdata()
+        niimg = nl.image.load_img("Demo2/flair.nii")
+        nimask = nl.image.load_img("Demo2/seg.nii")
         cut = [126, -86, 98]
     
     if demo_selection == 'Demo 3':
-        image_t1_ce = nib.load('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain5/t1ce.nii').get_fdata()
-        niimg = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain5/flair.nii')
-        nimask = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain5/seg.nii')
+        image_t1_ce = nib.load("Demo3/t1ce.nii").get_fdata()
+        niimg = nl.image.load_img("Demo3/flair.nii")
+        nimask = nl.image.load_img("Demo3/seg.nii")
         cut = [83, -80, 68]
 
     if demo_selection == 'Demo 1' or demo_selection == 'Demo 2' or demo_selection == 'Demo 3':
@@ -512,7 +512,7 @@ def page_tumors():
         st.write('')
         st.write('')
 
-        segmentation_button = st.button('Tumor Segmentation')
+        segmentation_button = st.button('AUTOMATIC SEGMENTATION')
     
         st.write('')
         st.write('')
@@ -551,7 +551,7 @@ def page_tumors():
                 st.pyplot(axial)
         
             with col6:
-                legend_img = Image.open('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/legend.JPG')
+                legend_img = Image.open('image/legend.JPG')
                 st.write('')
                 st.write('')
                 st.write('')
