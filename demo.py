@@ -365,8 +365,11 @@ def page_alzheimer():
 
 def page_tumors():
         
-    st.write("""<style>span.st-e1.st-b2.st-bp.st-e2.st-e3.st-e4.st-e5.st-e6.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eb.st-cc.st-ec.st-eq.st-er.st-ee.st-ef.st-eg.st-eh.st-ei.st-c6.st-ej.st-ek {
-    width: 30px; height: 30px; border-color: yellow; margin-left: 18px; margin-right: 10px; background-color: rgb(16 81 92);} 
+    st.write("""<style>
+    span.st-e1.st-b2.st-bp.st-e2.st-e3.st-e4.st-e5.st-e6.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e7.st-e8.st-e9.st-ea.st-av.st-aw.st-ax.st-ay.st-eb.st-cc.st-ec.st-ed.st-ee.st-ef.st-eg.st-eh.st-ei.st-c6.st-ej.st-ek
+    {width: 30px; height: 30px; border-color: yellow; margin-left: 18px; margin-right: 10px; background-color: rgb(16 81 92);} 
+    span.st-e1.st-b2.st-bp.st-e2.st-e3.st-e4.st-e5.st-e6.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eb.st-cc.st-ec.st-eq.st-er.st-ee.st-ef.st-eg.st-eh.st-ei.st-c6.st-ej.st-ek 
+    {width: 30px; height: 30px; border-color: yellow; margin-left: 18px; margin-right: 10px; background-color: rgb(16 81 92);} 
     svg.st-cc.st-d2.st-bq.st-d3.st-d4.st-d5 {color: yellow}
     .css-9ycgxx.exg6vvm3 {color:white}
     .css-113fe4q.euu6i2w0 {color:gray}
