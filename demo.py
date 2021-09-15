@@ -182,8 +182,7 @@ def analyse_alzheimer(test_img):
                  <p style="text-align:center; font-size:120%; color:#12A67F"><u>Stage of dementia</u></p>
                  <p style="text-align:center; font-size:120%; color:#115764"><b>Stage 1. No impairment</b></p>
                  <p style="text-align:center; font-size:120%; color:#12A67F"><u>Diagnosis</u></p>
-                 <p style="text-align:center; font-size:120%; color:#115764"><b>No dementia</b></p>
-                     """, unsafe_allow_html=True)
+                 <p style="text-align:center; font-size:120%; color:#115764"><b>No dementia</b></p>""", unsafe_allow_html=True)
          st.write("")
          st.write(predict_proba)
         
@@ -192,8 +191,7 @@ def analyse_alzheimer(test_img):
                  <p style="text-align:center; font-size:120%; color:#12A67F"><u>Stage of dementia</u></p>
                  <p style="text-align:center; font-size:120%; color:#115764"><b>Stage 2. Very mild decline</b></p>
                  <p style="text-align:center; font-size:120%; color:#12A67F"><u>Diagnosis</u></p>
-                 <p style="text-align:center; font-size:120%; color:#115764"><b>No dementia</b></p>
-                 """, unsafe_allow_html=True) 
+                 <p style="text-align:center; font-size:120%; color:#115764"><b>No dementia</b></p>""", unsafe_allow_html=True) 
         st.write("")
         st.write(predict_proba)
 
@@ -440,8 +438,10 @@ def page_tumors():
 
             with col2:
                 analyse_mri_tumors(rand_image)
-     
-    st.write("""<h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
+    
+    st.write("")
+    st.write("")
+    st.write("""<hr><h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
     st.write("")
                      
 # PAGE MMSE
