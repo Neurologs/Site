@@ -357,7 +357,7 @@ def page_alzheimer():
 def page_tumors():
         
     st.write("""<style>
-        .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek, .st-el {padding-left: 6px; padding-top:5px}                                        
+        .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek, .st-el {padding-left: 5px; padding-top:5px}                                        
         .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
         .st-e0 {width: 30px} .st-e1 {height: 30px} .st-fo, .st-en {background-color: #12A67F} .st-eg {margin-left: 19px; margin-right: 14px;} 
         #.st-el, .st-ep, .st-ey, .st-ew {background-color:#ffe4e1}
@@ -376,10 +376,13 @@ def page_tumors():
         </style>""", unsafe_allow_html=True)
 
     st.write("")
-    title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Brain tumors classifier</b><br><br></h1>"""
+    title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>BRAIN TUMORS</b><br><br></h1>"""
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
     
+    st.write("")
+    st.write("""<h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>1. Tumors Classifier</b><br><br></h2>""", unsafe_allow_html=True)
+    st.write("")
     st.image("images/tumors_pres.jpg", use_column_width='auto')
            
     tumors_text = """<p style="font-size:105%; color:#3b4a46; font-weight:450;"><br>
