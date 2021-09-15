@@ -6,6 +6,7 @@ import cv2
 import imutils
 from PIL import Image
 import matplotlib.pyplot as plt
+from io import BytesIO
 
 import nilearn as nl
 import nilearn.plotting as nlplt
@@ -529,14 +530,18 @@ def page_tumors():
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='y', cut_coords=[cut[0]],title="Segmentation : sagittal view", annotate=False, cmap='RdYlGn', figure=sagit)
                 nlplt.show()
                 plt.axis('off')
-                st.pyplot(sagit)
-        
+                buf = BytesIO()
+                sagit.savefig(buf, format="png")
+                st.image(buf)
+               
             with col4:
                 coronal = plt.figure(figsize=(11, 14))
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='x', cut_coords=[cut[1]],title="Segmentation : coronal view", annotate=False, cmap='RdYlGn', figure=coronal)
                 nlplt.show()
                 plt.axis('off')
-                st.pyplot(coronal)
+                buf = BytesIO()
+                coronal.savefig(buf, format="png")
+                st.image(buf)
         
             st.write('')
             st.write('')
@@ -548,7 +553,9 @@ def page_tumors():
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='z', cut_coords=[cut[2]],title="Segmentation : axial view", annotate=False, cmap='RdYlGn', figure=axial)
                 nlplt.show()
                 plt.axis('off')
-                st.pyplot(axial)
+                buf = BytesIO()
+                axial.savefig(buf, format="png")
+                st.image(buf)
         
             with col6:
                 legend_img = Image.open('images/legend.JPG')
