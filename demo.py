@@ -1,15 +1,26 @@
 import streamlit as st
 import streamlit.components.v1 as components
 import numpy as np
+
 import cv2
 import imutils
 from PIL import Image
+import matplotlib.pyplot as plt
+
+import nilearn as nl
+import nilearn.plotting as nlplt
+import nibabel as nib
+
 import os
 import random
+
 from tensorflow.keras import models
 from tensorflow.keras.models import load_model
 from tensorflow.keras.models import model_from_yaml
 import h5py
+
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 # FUNCTIONS
