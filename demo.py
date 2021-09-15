@@ -525,14 +525,14 @@ def page_tumors():
             col3, col4 = st.beta_columns(2)
         
             with col3:
-                sagit = plt.figure(figsize=(9, 9))
+                sagit = plt.figure(1, figsize=(9, 9))
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='y', cut_coords=[cut[0]],title="Segmentation : sagittal view", annotate=False, cmap='RdYlGn', figure=sagit)
                 nlplt.show()
                 plt.axis('off')
                 st.pyplot(sagit)
         
             with col4:
-                coronal = plt.figure(figsize=(9, 9))
+                coronal = plt.figure(1, figsize=(9, 9))
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='x', cut_coords=[cut[1]],title="Segmentation : coronal view", annotate=False, cmap='RdYlGn', figure=coronal)
                 nlplt.show()
                 plt.axis('off')
@@ -544,7 +544,7 @@ def page_tumors():
             col5, col6 = st.beta_columns(2)
                 
             with col5:
-                axial = plt.figure(figsize=(9, 9))
+                axial = plt.figure(1, figsize=(9, 9))
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='z', cut_coords=[cut[2]],title="Segmentation : axial view", annotate=False, cmap='RdYlGn', figure=axial)
                 nlplt.show()
                 plt.axis('off')
