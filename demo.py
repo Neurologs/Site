@@ -6,6 +6,7 @@ import cv2
 import imutils
 from PIL import Image
 import matplotlib.pyplot as plt
+%matplotlib inline
 
 import nilearn as nl
 import nilearn.plotting as nlplt
@@ -522,17 +523,17 @@ def page_tumors():
             st.write('')
             st.write('')
          
-            col3, col4 = st.beta_columns(2)
+            col3, col4 = st.columns(2)
         
             with col3:
-                sagit = plt.figure(figsize=(11, 14))
+                sagit = plt.figure(figsize=(8, 8))
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='y', cut_coords=[cut[0]],title="Segmentation : sagittal view", annotate=False, cmap='RdYlGn', figure=sagit)
                 plt.show()
                 plt.axis('off')
                 st.pyplot(sagit)
                
             with col4:
-                coronal = plt.figure(figsize=(11, 14))
+                coronal = plt.figure(figsize=(8, 8))
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='x', cut_coords=[cut[1]],title="Segmentation : coronal view", annotate=False, cmap='RdYlGn', figure=coronal)
                 plt.show()
                 plt.axis('off')
@@ -541,10 +542,10 @@ def page_tumors():
             st.write('')
             st.write('')
         
-            col5, col6 = st.beta_columns(2)
+            col5, col6 = st.columns(2)
                 
             with col5:
-                axial = plt.figure(figsize=(11, 14))
+                axial = plt.figure(figsize=(8, 8))
                 nlplt.plot_roi(nimask, bg_img=niimg, display_mode='z', cut_coords=[cut[2]],title="Segmentation : axial view", annotate=False, cmap='RdYlGn', figure=axial)
                 plt.show()
                 plt.axis('off')
