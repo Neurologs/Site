@@ -391,7 +391,8 @@ def page_tumors():
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>BRAIN TUMORS</b><br></h1>"""
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
-    st.write("""<h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>1. Tumors Classifier</b><br><br></h2>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<h2 style = "text_align:left; color:#0C6A91; font-family:Gadugi;"><b>1. Tumors Classifier</b><br><br></h2>""", unsafe_allow_html=True)
     st.write("")
     st.image("images/tumors_pres.jpg", use_column_width='auto')
            
@@ -413,7 +414,6 @@ def page_tumors():
     st.write("")
     st.write("")
     
-
     if uploaded_file is not None:
         
         with st.spinner('ANALYSIS IN PROGRESS'):
@@ -455,7 +455,7 @@ def page_tumors():
     
     st.write("")
     st.write("")
-    st.write("""<hr><h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
+    st.write("""<hr><h2 style = "text_align:left; color:#0C6A91; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
     st.write("")
     demo_selection = st.selectbox('', ['Select a Demo example', 'Demo 1', 'Demo 2', 'Demo 3'])
     st.write("")
