@@ -220,8 +220,8 @@ with st.sidebar:
 def main():
     pages = {
         "Home": homepage,
-        "Alzheimer's stages": page_alzheimer,
-        "Brain tumors classifier": page_tumors,
+        "Alzheimer": page_alzheimer,
+        "Brain Tumors": page_tumors,
         "Mini-Mental State Examination": MMSE_page,
         "Ongoing projects": ongoing_page}
 
@@ -461,6 +461,102 @@ def page_tumors():
     st.write("")
     st.write("")
     st.write("")
+    
+    if demo_selection == 'Demo 1':
+        image_t1_ce = nib.load('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain1/t1ce.nii').get_fdata()
+        niimg = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain1/flair.nii')
+        nimask = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain1/seg.nii')
+        cut = [118, -90, 75]
+    
+    if demo_selection == 'Demo 2':
+        image_t1_ce = nib.load('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain2/t1ce.nii').get_fdata()
+        niimg = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain2/flair.nii')
+        nimask = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain2/seg.nii')
+        cut = [126, -86, 98]
+    
+    if demo_selection == 'Demo 3':
+        image_t1_ce = nib.load('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain5/t1ce.nii').get_fdata()
+        niimg = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain5/flair.nii')
+        nimask = nl.image.load_img('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/Brain5/seg.nii')
+        cut = [83, -80, 68]
+
+    if demo_selection == 'Demo 1' or demo_selection == 'Demo 2' or demo_selection == 'Demo 3':
+
+        col1, col2 = st.beta_columns([1,2])
+
+        with col1:
+            st.write('T1-contrast MRI')
+            image_t1_ce_rot = np.rot90(image_t1_ce, axes=(1,0))
+            fig1 = plt.figure()
+            plt.imshow(image_t1_ce_rot[:,:,cut[2]], cmap='gist_gray')
+            plt.axis('off')
+            st.pyplot(fig1)
+            st.write('')
+            st.write('')
+            
+            interactive_view = st.button('Interactive view')
+        
+            if interactive_view:
+                int_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
+                int_view.open_in_browser()
+
+        with col2:
+            st.write('FLAIR MRI\nOrthogonal views : Sagittal, Coronal, Axial')
+            fig2 = plt.figure()
+            nlplt.plot_anat(niimg, display_mode="ortho", annotate=False, draw_cross=False, figure=fig2)
+            plt.axis('off')
+            st.pyplot(fig2)
+    
+        st.write('')
+        st.write('')
+        st.write('')
+        st.write('')
+
+        segmentation_button = st.button('Tumor Segmentation')
+    
+        st.write('')
+        st.write('')
+
+        if segmentation_button:
+    
+            st.write('')
+            st.write('')
+         
+            col3, col4 = st.beta_columns(2)
+        
+            with col3:
+                sagit = plt.figure(figsize=(11, 14))
+                nlplt.plot_roi(nimask, bg_img=niimg, display_mode='y', cut_coords=[cut[0]],title="Segmentation : sagittal view", annotate=False, cmap='RdYlGn', figure=sagit)
+                nlplt.show()
+                plt.axis('off')
+                st.pyplot(sagit)
+        
+            with col4:
+                coronal = plt.figure(figsize=(11, 14))
+                nlplt.plot_roi(nimask, bg_img=niimg, display_mode='x', cut_coords=[cut[1]],title="Segmentation : coronal view", annotate=False, cmap='RdYlGn', figure=coronal)
+                nlplt.show()
+                plt.axis('off')
+                st.pyplot(coronal)
+        
+            st.write('')
+            st.write('')
+        
+            col5, col6 = st.beta_columns(2)
+                
+            with col5:
+                axial = plt.figure(figsize=(11, 14))
+                nlplt.plot_roi(nimask, bg_img=niimg, display_mode='z', cut_coords=[cut[2]],title="Segmentation : axial view", annotate=False, cmap='RdYlGn', figure=axial)
+                nlplt.show()
+                plt.axis('off')
+                st.pyplot(axial)
+        
+            with col6:
+                legend_img = Image.open('C:/Users/Dell/Desktop/TUMORS/SEGMENTATION/legend.JPG')
+                st.write('')
+                st.write('')
+                st.write('')
+                st.image(legend_img)
+        
                      
 # PAGE MMSE
 
