@@ -242,7 +242,7 @@ def homepage():
     image_map = "images/home_map.jpg"
     st.image(image_map, use_column_width=True)
 
-    st.write("""<br><p style="font-size:105%; color:#3b4a46; font-weight:450; text-align:left">Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency. As well as a formidable challenge.<br><br>
+    st.write("""<br><p style="font-size:105%; color:#3b4a46; font-weight:450; font-family:Gadugi; text-align:left">Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency. As well as a formidable challenge.<br><br>
     At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine.<br><br>
     Our teams works to provide healthcare professionals a comprehensive cloud-based Platform with AI-assisted diagnostics solutions, personalized treatment recommendation systems and tools for clinical research in the field of brain disorders.</p>""", unsafe_allow_html=True)
     st.write("")
@@ -455,7 +455,7 @@ def page_tumors():
     
     st.write("")
     st.write("")
-    st.write("""<hr><h2 style = "text_align:left; color:#0C6A91; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
+    st.write("""<hr><br><h2 style = "text_align:left; color:#0C6A91; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
     st.write("")
     demo_selection = st.selectbox('', ['Select a Demo example', 'Demo 1', 'Demo 2', 'Demo 3'])
     st.write("")
