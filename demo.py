@@ -277,7 +277,7 @@ def page_alzheimer():
                 .css-1p9wfzo {color: #0c113899; text-align: left; margin-top: 1.5em; font-weight:400; font-size:85%}
                 .css-rncmk8 > * {margin:0px}
                 .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
-                .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
+                .css-1kyxreq.etr89bj0 {background-color: lightyellow; height: 350px; margin:0px}
                 @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
                 </style>""", unsafe_allow_html=True)
     
