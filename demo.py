@@ -242,7 +242,7 @@ def homepage():
     st.image(platform, use_column_width=True)
     st.write("")
     
-    st.write("""<p style = "color:#12A67F; font-family:Gadugi; font-weight:bold">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we are developing.</p>""", unsafe_allow_html=True)
+    st.write("""<p style = "font-size:105%; color:#12A67F; font-family:Gadugi; font-weight:450; text-align:left">Please use the navigation bar (on the left) to discover and test some of the diagnostics algorithms we are developing.</p>""", unsafe_allow_html=True)
 
     
 # PAGE ALZHEIMER
@@ -379,13 +379,12 @@ def page_tumors():
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>BRAIN TUMORS</b><br><br></h1>"""
     st.markdown(title, unsafe_allow_html=True)
     st.write("")
-    
-    st.write("")
+  
     st.write("""<h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>1. Tumors Classifier</b><br><br></h2>""", unsafe_allow_html=True)
     st.write("")
     st.image("images/tumors_pres.jpg", use_column_width='auto')
            
-    tumors_text = """<p style="font-size:105%; color:#3b4a46; font-weight:450;"><br>
+    tumors_text = """<p style="font-size:105%; color:#3b4a46; font-weight:450; text-align:left"><br>
       We have designed a deep convolutional neural network aimed to detect and classify the most common primary brain tumors : glioma, meningioma and pituitary tumors.<br><br>
       The model has been trained on 2870 brain MRI (T1, T2 and FLAIR images) and tested on 395 MRI, manually labeled and verified by medical doctors.<br><br>
       The model's accuracy is up to 95%.<br><br>
