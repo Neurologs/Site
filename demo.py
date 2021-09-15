@@ -326,7 +326,7 @@ def page_alzheimer():
         with st.spinner('ANALYSIS IN PROGRESS'):
             st.write("")
             st.write("")
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
           
             with col1:
                 test_img = cv2.resize(test_img, (350,350))
@@ -350,7 +350,7 @@ def page_alzheimer():
         with st.spinner('ANALYSIS IN PROGRESS'):
             st.write("")
             st.write("")
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
             with col1:
                 rand_image = cv2.resize(rand_image, (350,350))
                 st.image(rand_image)
@@ -420,7 +420,7 @@ def page_tumors():
             st.write("")
             st.write("")
         
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
             
             with col1:
                 file_bytes = np.asarray(bytearray(uploaded_file.read()), dtype=np.uint8)
@@ -445,7 +445,7 @@ def page_tumors():
         with st.spinner('ANALYSIS IN PROGRESS'):
             st.write("")
             st.write("")
-            col1, col2 = st.beta_columns(2)
+            col1, col2 = st.columns(2)
             with col1:
                 file_test_tumors = "tumors_random"
                 rand_image = random_scan_tumors(file_test_tumors)
@@ -482,7 +482,7 @@ def page_tumors():
 
     if demo_selection == 'Demo 1' or demo_selection == 'Demo 2' or demo_selection == 'Demo 3':
 
-        col1, col2 = st.beta_columns([1,2])
+        col1, col2 = st.columns([1,2])
 
         with col1:
             st.write('T1-contrast MRI')
@@ -793,7 +793,7 @@ def MMSE_page():
     
     if adjusted:
         
-        col1, col2 = st.beta_columns(2)
+        col1, col2 = st.columns(2)
         
         with col1:
             st.write("")
