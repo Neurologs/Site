@@ -6,7 +6,6 @@ import cv2
 import imutils
 from PIL import Image
 import matplotlib.pyplot as plt
-% matplotlib inline
 
 import nilearn as nl
 import nilearn.plotting as nlplt
