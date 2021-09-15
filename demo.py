@@ -365,12 +365,7 @@ def page_alzheimer():
 
 def page_tumors():
         
-    st.write("""<style>
-    span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-eq.st-er.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
-    {height: 30px; width: 30px; margin-left: 18px; margin-right: 14px; border-color: yellow; border-width: 3px; background-color:rgb(16,81,92); padding-left: 5px; padding-top:5px}
-    .st-ag {font-weight: bold} .st-af {font-size: 1rem}                                    
-  
-     svg.st-cc.st-d2.st-bq.st-d3.st-d4.st-d5 {color: yellow}
+    st.write("""<style>svg.st-cc.st-d2.st-bq.st-d3.st-d4.st-d5 {color: yellow}
         .css-9ycgxx.exg6vvm3 {color:white}
         .css-113fe4q.euu6i2w0 {color:gray}
         .css-1op0mqd.exg6vvm2 {color:yellow} 
