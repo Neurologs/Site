@@ -457,13 +457,13 @@ def page_tumors():
     st.write("")
     st.write("""<hr><h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
     st.write("")
-    demo_selection = st.selectbox('', ['Select a demo example', 'Demo 1', 'Demo 2', 'Demo 3'])
+    demo_selection = st.selectbox('', ['Select a Demo example', 'Demo 1', 'Demo 2', 'Demo 3'])
     st.write("")
     st.write("")
     st.write("")
     
     if demo_selection == 'Demo 1':
-        image_t1_ce = nib.load("Demo1/t1ce.nii").get_fdata()  "Demo1/t1ce.nii"
+        image_t1_ce = nib.load("Demo1/t1ce.nii").get_fdata()  
         niimg = nl.image.load_img("Demo1/flair.nii")
         nimask = nl.image.load_img("Demo1/seg.nii")
         cut = [118, -90, 75]
@@ -551,7 +551,7 @@ def page_tumors():
                 st.pyplot(axial)
         
             with col6:
-                legend_img = Image.open('image/legend.JPG')
+                legend_img = Image.open('images/legend.JPG')
                 st.write('')
                 st.write('')
                 st.write('')
