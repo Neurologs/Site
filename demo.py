@@ -355,12 +355,16 @@ def page_alzheimer():
 def page_tumors():
         
     st.write("""<style>
-        .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek, .st-el {padding-left: 5px; padding-top:5px}                                        
-        .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
-        .st-e0 {width: 30px} .st-e1 {height: 30px} 
-        .st-eg {margin-left: 19px; margin-right: 14px;} 
+        .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}                                   
+    
         .st-fo, .st-en {background-color: #12A67F}
         .st-cc.st-d2.st-bq.st-d3.st-d4.st-d5 {color: yellow}
+        
+        
+        span.st-e1.st-b2.st-bp.st-e2.st-e3.st-e4.st-e5.st-e6.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eb.st-cc.st-ec.st-eq.st-er.st-ee.st-ef.st-eg.st-eh.st-ei.st-c6.st-ej.st-ek 
+        {height: 30px; width:30px; border-color:yellow; padding-left: 5px; padding-top:5px; margin-left: 19px; margin-right: 14px;}
+        
+        
         #.st-el {background-color:#ffe4e1}
         # .st-ep, .st-ey, .st-ew
         .css-9ycgxx.exg6vvm3 {color:white}
