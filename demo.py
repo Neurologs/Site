@@ -552,9 +552,6 @@ def page_tumors():
         
             with col6:
                 legend_img = Image.open('images/legend.JPG')
-                st.write('')
-                st.write('')
-                st.write('')
                 st.image(legend_img)
         
                      
