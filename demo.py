@@ -263,7 +263,7 @@ def page_alzheimer():
                 .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
                  {border-color: yellow; margin-left: 19px; margin-right: 14px; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
-                .st-e0 {width: 30px} .st-e1 {height: 30px} .st-fo, .st-en {background-color: #12A67F} .st-eg {margin-left: 19px; margin-right: 14px;} 
+                .st-e0 {width: 30px} .st-e1 {height: 30px} .st-fo, .st-eg {margin-left: 19px; margin-right: 14px;} 
                 #.st-el, .st-ep, .st-ey, .st-ew {background-color:#ffe4e1}
                 .css-9ycgxx.exg6vvm3 {color:white}
                 .css-113fe4q.euu6i2w0 {color:gray}
@@ -381,6 +381,7 @@ def page_tumors():
     .css-rncmk8 > * {margin:0px}
     .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
     .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
+    label {display: inline-flex}
      @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
      </style>""", unsafe_allow_html=True)
 
