@@ -358,6 +358,7 @@ def page_tumors():
         .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem} .st-ek, .st-el {padding-left: 5px; padding-top:5px}                                        
         .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
         .st-e0 {width: 30px} .st-e1 {height: 30px} .st-fo, .st-en {background-color: #12A67F} .st-eg {margin-left: 19px; margin-right: 14px;} 
+        .st-f5 {color: yellow}
         #.st-el, .st-ep, .st-ey, .st-ew {background-color:#ffe4e1}
         .css-9ycgxx.exg6vvm3 {color:white}
         .css-113fe4q.euu6i2w0 {color:gray}
@@ -365,7 +366,7 @@ def page_tumors():
         .css-1qpos38 {background-color:#12A67F; color:white; font-size:18px} 
         .row-widget.stButton{text-align:center}
         .uploadedFileData.css-1l4firl.exg6vvm8{color:#10515C} 
-         p {font_size:100%; text-align:center; font-weight:bold; color:#3b4a46}
+         p {font_size:105%; text-align:center; font-weight:bold; color:#3b4a46}
          label {display: inline-flex}
         .css-rncmk8 > * {margin:0px}
         .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
@@ -443,7 +444,7 @@ def page_tumors():
     st.write("")
     st.write("""<hr><h2 style = "text_align:left; color:#12A67F; font-family:Gadugi;"><b>2. Automatic Segmentation</b><br><br></h2>""", unsafe_allow_html=True)
     st.write("")
-    demo_selection = st.selectbox('', ['Select', 'Demo 1', 'Demo 2', 'Demo 3'])
+    demo_selection = st.selectbox('', ['Select a demo example', 'Demo 1', 'Demo 2', 'Demo 3'])
     st.write("")
     st.write("")
     st.write("")
