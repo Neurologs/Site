@@ -301,7 +301,7 @@ def page_alzheimer():
     st.write("""<hr><p style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left">We propose a deep convolutional neural network for early-stage Alzheimer's Disease diagnosis using brain MRI data analysis. Based on VGG16 (OxfordNet) architecture, the model achieves accuracy higher than 98%.<br><br>
                 The data used to design the algorithm consists of 6400 preprocessed MRI (axial slices T1 weighted) categorized as non-demented, very mildly demented, mildly demented and moderately demented. Labels are based on the level of neurological degeneration as defined by the Global Deterioration Scale (or “Reisberg Scale”).<br><br>
                 Please upload a brain MRI or choose a random image to determine the stage of Alzheimer's disease the patient is experiencing.<br><br>
-                <u>Note</u> : you can also estimate the cognitive decline and eventually confirm the diagnosis of Alzheimer’s by administering the patient the Mini-mental State Examination.<br><br></p>""", unsafe_allow_html=True)
+                You can also estimate the cognitive decline and eventually confirm the diagnosis of Alzheimer’s by administering the patient the Mini-mental State Examination.<br><br></p>""", unsafe_allow_html=True)
     st.write("")
 
     uploaded_file = st.file_uploader('')
