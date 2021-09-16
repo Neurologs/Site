@@ -359,6 +359,262 @@ def page_alzheimer():
                 resize_image = cv2.resize(rand_image, (224, 224))
                 resize_image = np.expand_dims(resize_image, axis=0) 
                 analyse_alzheimer(rand_image)
+    
+    st.write("")
+    st.write("")
+    st.write("""<hr><br><h2 style = "text_align:left; color:#0C6A91; font-family:Gadugi;"><b>2. Mini-Mental State Examination</b><br><br></h2>""", unsafe_allow_html=True)
+    
+    st.markdown("""<style>
+                p {color:#126F90; font-weight:bold; text-align:justify;}
+                li {color:#3b4a46; text-align:justify; font-weight:450}
+                .st-bq{color:#3A4044}
+                .time{color:#bb0f6e}
+                div.row-widget.stRadio > div{flex-direction:row;} .st-bg.st-bj.st-bk.st-bl.st-bm.st-bn.st-az.st-b4.st-bo.st-bp.st-bq.st-br.st-bs.st-bt.st-bu.st-bv.st-bw.st-bx.st-b2.st-by{background-color:#E2005B}
+                .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
+                code, kbd {font-size: 120%; background-color:white; color: #bb0f6e;}
+                .css-1w0ubgf {background-color: lightyellow; height:250px}
+                .css-rncmk8.e1tzin5v0 p {text-align: center}
+                </style>""", unsafe_allow_html=True)
+    
+    st.write("")
+    st.write("")
+    st.write("""<p style="color:#3b4a46; text-align:justify; font-weight:450">
+             Originally introduced by Folstein et <i>al.</i> in 1975, The Mini–Mental State Examination (MMSE) is a 30-point questionnaire 
+             used extensively as a screening device for cognitive impairment and as a diagnostic adjunct for assessing 
+             Alzheimer’s disease or other types of dementias (Parkinson's disease, Lewy bodies, vascular dementia, etc.)<br><br>
+             Administration of the test takes between 5 and 10 minutes and measures the following cognitive functions:</p>
+             <ul>
+             <li> Orientation to time and place</li>
+             <li> Short-term memory</li>
+             <li> Attention and ability to solve problems</li>
+             <li> Language use and comprehension</li>
+             <li> Basic motor skills</li>
+             </ul>
+             <p style="color:#3b4a46; text-align:justify; font-weight:450">Any score of 24 or more (out of 30) indicates a normal cognition. Below this, scores can indicate mild (19–23 points), moderate (10–18 points) or severe (≤9 points) cognitive impairment.
+             </p>""", unsafe_allow_html=True)
+    
+    st.write("")
+    st.write("")
+    
+    not_applicable = 30
+    
+    st.write("""<h2 style="color:#051D31;"><b>1. Orientation to Time</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 10 seconds for each reply.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("A) What year is this ?")
+    year = st.radio("",('Correct', 'Incorrect', 'Not applicable'), key='year')
+    st.write("B) What season is this ?") 
+    season = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='season')
+    st.write("C) What month is this ?")
+    month = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='month')
+    st.write("D) What is today’s date ?") 
+    date = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='date')
+    st.write("E) What day of the week is this ?") 
+    day = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='day')
+    orientation_time_score = 0
+    for answer in [year, season, month, date, day]:
+        if answer == 'Correct':
+            orientation_time_score += 1
+        elif answer == 'Not applicable':
+            not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>2. Orientation to Place</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 10 seconds for each reply.</p>""", unsafe_allow_html=True)
+    st.write("")        
+    st.write("A) What country are we in ?")
+    country = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='country')
+    st.write("B) What province are we in ?")
+    province = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='province')
+    st.write("C) What city/town are we in ?")
+    city = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='city')
+    st.write("D) What is the address/name of this place ?")
+    address = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='address')
+    st.write("E) What room/floor are we in/on ?")
+    building = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='building')
+    orientation_place_score = 0
+    for answer in [country, province, city, address, building]:
+        if answer == 'Correct':
+            orientation_place_score += 1
+        elif answer == 'Not applicable':
+            not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>3. Registration</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 20 seconds.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><u>Say</u> : I am going to name three objects. When I am finished, I want you to repeat them. Remember what they are because I am going to ask you to name them again in a few minutes.<br> 
+    <span style="color:#3A4044";>[<i>Say the following words slowly at approximately one-second intervals</i> :]</span> Ball / Car / Man<br>
+    Please repeat the three items for me.<br>
+    <span style="color:#3A4044";>[<i>Score one point for each correct reply on the first attempt. If the patient did not repeat all three, repeat until they are learned or up to a maximum of five times.
+    But only score first attempt.</i>]</span></p>""", unsafe_allow_html=True)
+    st.write("""<p style="color:#12A67F;">Number of correct replies :</p>""", unsafe_allow_html=True)
+    three_words = st.radio('', [0, 1, 2, 3, 'Not applicable'])
+    if three_words in range(4):
+        learning_score = three_words
+    if three_words == 'Not applicable':
+        not_applicable -= 1
+        learning_score = 0
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>4. Attention</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 30 seconds.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><u>Say</u> : I would like you to count backward from 100 by sevens.<br>
+    <span style="color:#3A4044";>[93, 86, 79, 72, 65, …]</span></p>""", unsafe_allow_html=True) 
+    st.write("""<p style="color:#12A67F;">Number of correct answers :</p>""", unsafe_allow_html=True)      
+    count = st.radio('', [0, 1, 2, 3, 4, 5, 'Not applicable'], key="count")
+    if count in range(6):
+        count_score = count
+    if count == 'Not applicable':
+        count_score = 0
+        not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>5. Recall</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 10 seconds.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><u>Say</u> : Earlier I told you the names of three things. Can you tell me what those were?<br>
+    <span style="color:#3A4044";>[<i>Items may be repeated in any order.</i>]</span></p>""", unsafe_allow_html=True)
+    st.write("""<p style="color:#12A67F;">Number of correct answers :</p>""", unsafe_allow_html=True)  
+    recall = st.radio('', [0, 1, 2, 3, 'Not applicable'], key="recall")
+    if recall in range(4):
+        recall_score = recall
+    if recall == 'Not applicable':
+        recall_score = 0
+        not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>6. Naming</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 10 seconds for each reply.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p>A) <u>Say</u> : What is this called?<br><span style="color:#3A4044";>[<i>Show wristwatch.</i>]</span><br>
+    <span style="color:#3A4044";>[<i>Accept “wristwatch” or “watch” ; do not accept “clock” or “time”, etc.</i>]</p>""", unsafe_allow_html=True)
+    wristwatch = st.radio("",('Correct', 'Incorrect', 'Not applicable'), key='wristwatch')
+    st.write("""<p>B) <u>Say</u> : What is this called?<br><span style="color:#3A4044";>[<i>Show pencil.</i>]</span><br>
+    <span style="color:#3A4044";>[<i>Accept “pencil” only.</i>]</p>""", unsafe_allow_html=True)
+    pencil = st.radio("",('Correct', 'Incorrect', 'Not applicable'), key='pencil')
+    naming_score = 0
+    for answer in [wristwatch, pencil]:
+        if answer == 'Correct':
+            naming_score += 1
+        elif answer == 'Not applicable':
+            not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>7. Repetition</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 10 seconds.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><u>Say</u> I would like you to repeat a phrase after me : "No ifs, ands or buts"<br>
+    <span style="color:#3A4044";>[<i>Repetition must be exact.</i>]</span></p>""", unsafe_allow_html=True)
+    repetition = st.radio("",('Correct', 'Incorrect', 'Not applicable'), key='repetition')
+    repetition_score = 0
+    if repetition == 'Correct':
+        repetition_score = 1
+    if repetition == 'Not applicable': 
+        not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>8. Comprehension</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 30 seconds.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><span style="color:#3A4044";>[<i>Ask the patient if he is right or left handed. Take a piece of paper and hold it up in front of the patient.</i>]</span><br>
+    <u>Say</u> : Take this paper in your right/left hand (whichever is non-dominant), fold the paper in half once with both hands and put the paper down on the floor.</p>""", unsafe_allow_html=True)
+    st.write("""<p style="color:#12A67F;">Number of instructions executed correctly :</p>""", unsafe_allow_html=True)  
+    action = st.radio("", [0, 1, 2, 3, 'Not applicable'], key='action')
+    if action in range(4):
+        action_score = action 
+    if action == 'Not applicable':
+        action_score = 0
+        not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>9. Reading</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 20 seconds.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><span style="color:#3A4044";>[<i>Hand patient the card with ’CLOSE YOUR EYES’ on it.</i>]</span><br>
+    <u>Say</u> : Please read the words on this card and then do what it says.<br>
+    <span style="color:#3A4044";>[<i>Repeat instructions up to three times if necessary.</i>]</span></p>""", unsafe_allow_html=True)
+    eyes = st.radio("", ("The patient closes his/her eyes", "The patient doesn't close his/her eyes", "Not applicable"), key='eyes')
+    eyes_score = 0
+    if eyes == "The patient closes his/her eyes":
+        eyes_score = 1
+    if eyes == 'Not applicable':
+        not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>10. Writing</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 30 seconds.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><span style="color:#3A4044";>[<i>Hand patient a pencil and paper.</i>]</span><br>
+    <u>Say</u> : Write any complete sentence on that piece of paper.<br>       
+    <span style="color:#3A4044";>[<i>The sentence must contain a subject, verb and object, and make sense. Ignore spelling errors.</i>]</span></p>""", unsafe_allow_html=True)      
+    sentence = st.radio("", ('Correct', 'Incorrect', 'Not applicable'), key='sentence')
+    sentence_score = 0
+    if sentence == "Correct":
+        sentence_score = 1
+    if sentence == 'Not applicable':
+        not_applicable -= 1
+    
+    st.write("""<h2 style="color:#051D31;"><b><br>11. Drawing</b></h2><hr>""", unsafe_allow_html=True)
+    st.write("""<p class="time"><u>Time</u> : 1 minute maximum.</p>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("""<p><span style="color:#3A4044";>[<i>Place design, eraser and pencil in front of the patient.</i>]</span><br>
+    <u>Say</u> : Copy this design please.<br><span style="color:#3A4044";>[<i>Allow multiple tries. Wait until the person is finished and hands it back. The patient must have drawn a four-sided figure between two five-sided figures.</i>]</span></p>""", unsafe_allow_html=True)
+    figure_photo = Image.open("images/figure_mmse.jpg")
+    st.image(figure_photo)
+    figure = st.radio("",('Correct', 'Incorrect', 'Not applicable'), key='figure')
+    figure_score = 0
+    if figure == 'Correct':
+        figure_score = 1
+    if figure == 'Not applicable':
+        not_applicable -= 1
+       
+    total_score = orientation_time_score + orientation_place_score + learning_score + count_score + recall_score + naming_score + repetition_score + eyes_score + sentence_score + action_score + figure_score
+    
+    if not_applicable > 0:
+        adjusted_score = round(total_score * 30 / not_applicable)
+    
+    if adjusted_score >= 24:
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Normal cognition : <br>no dementia<br><br><br></p>"""
+    elif adjusted_score < 24 and adjusted_score >= 19:
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Mild<br><br><br></p>"""
+    elif adjusted_score < 19 and adjusted_score >= 10:
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Moderate<br><br><br></p>"""
+    elif adjusted_score < 10:
+        result = """<p style="color:#051D31; font-size:110%; font-weight:bold; text-align:center;">Severe<br><br><br></p>"""
+    else: 
+        result = "Error. Please retry."
+    
+    st.write("")
+    st.write("")
+    st.write("")
+    
+    adjusted = st.button("Obtain score")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    
+    if adjusted:
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.write("")
+            st.write("""<h2 style="color:#12A67F; font-size:120%; font-weight:bold; text-align:center;">Total Score<hr></h2>""", unsafe_allow_html=True) 
+            st.write(adjusted_score)
+            st.write("")
+            
+        with col2:
+            st.write("")
+            st.write("""<h2 style="color:#12A67F; font-size:120%; font-weight:bold; text-align:center;">Level of dementia<hr></h2>""", unsafe_allow_html=True) 
+            st.write(result, unsafe_allow_html=True)
+            st.write("")
+        
+
+# PAGE ONGOING PROJECTS
+
+def ongoing_page():
+    st.write("")
+    st.write("")
+    st.write("""<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Ongoing projects</b></h1><br>""", unsafe_allow_html=True)
+    st.write("")
+    st.write("")
+    image_projects = "images/projects.jpg"
+    st.image(image_projects, use_column_width=True)
+
 
 
 # PAGE BRAIN TUMORS
