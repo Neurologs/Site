@@ -229,7 +229,7 @@ def main():
     pages[page]()
     
     st.markdown(
-        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br .st-bq {font-weight: bold; color: #26ca9f;} </style>""", unsafe_allow_html=True)
+        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br .st-bq {font-weight: bold; color: #3ab8d2;} </style>""", unsafe_allow_html=True)
 
 
 # HOMEPAGE
@@ -242,7 +242,7 @@ def homepage():
     image_map = "images/home_map.jpg"
     st.image(image_map, use_column_width=True)
 
-    st.write("""<br><p style="font-size:105%; color:#3b4a46; font-weight:450; font-family:Gadugi; text-align:left">Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency. As well as a formidable challenge.<br><br>
+    st.write("""<br><p style="font-size:105%; color:#3b4a46; font-weight:450; text-align:left">Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency. As well as a formidable challenge.<br><br>
     At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine.<br><br>
     Our teams works to provide healthcare professionals a comprehensive cloud-based Platform with AI-assisted diagnostics solutions, personalized treatment recommendation systems and tools for clinical research in the field of brain disorders.</p>""", unsafe_allow_html=True)
     st.write("")
