@@ -377,13 +377,13 @@ def page_alzheimer():
              Alzheimer’s disease or other types of dementias (Parkinson's disease, Lewy bodies, vascular dementia, etc.)<br><br>
              Administration of the test takes between 5 and 10 minutes and measures the following cognitive functions:</p>
              <ul>
-             <li> Orientation to time and place</li>
-             <li> Short-term memory</li>
-             <li> Attention and ability to solve problems</li>
-             <li> Language use and comprehension</li>
-             <li> Basic motor skills</li>
+             <li style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left"> Orientation to time and place</li>
+             <li style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left"> Short-term memory</li>
+             <li style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left"> Attention and ability to solve problems</li>
+             <li style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left"> Language use and comprehension</li>
+             <li style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left"> Basic motor skills</li>
              </ul>
-             <p style="color:#3b4a46; text-align:justify; font-weight:450">Any score of 24 or more (out of 30) indicates a normal cognition. Below this, scores can indicate mild (19–23 points), moderate (10–18 points) or severe (≤9 points) cognitive impairment.
+             <p style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left">Any score of 24 or more (out of 30) indicates a normal cognition. Below this, scores can indicate mild (19–23 points), moderate (10–18 points) or severe (≤9 points) cognitive impairment.
              </p>""", unsafe_allow_html=True)
     
     st.write("")
