@@ -175,8 +175,7 @@ def analyse_alzheimer(test_img):
                  """, unsafe_allow_html=True) 
         st.write("")
         st.write(predict_proba)
-       
-        
+              
     if prediction == 1:
         st.write("""<p style="text-align:center; font-size:130%; color:#3b4a46"><br><b>--  RESULT  --</b></p><br>
                  <p style="text-align:center; font-size:120%; color:#12A67F"><u>Stage of dementia</u></p>
@@ -187,7 +186,6 @@ def analyse_alzheimer(test_img):
         st.write("")
         st.write(predict_proba)
      
-        
     if prediction == 2:
          st.write("""<p style="text-align:center; font-size:130%; color:#3b4a46"><br><b>--  RESULT  --</b></p><br>
                  <p style="text-align:center; font-size:120%; color:#12A67F"><u>Stage of dementia</u></p>
@@ -206,6 +204,7 @@ def analyse_alzheimer(test_img):
         st.write("")
         st.write(predict_proba)
 
+        
 # NAVIGATION BAR
 
 with st.sidebar:
@@ -281,12 +280,13 @@ def page_alzheimer():
                 </style>""", unsafe_allow_html=True)
     
     st.write("")
+    
     title = """<h1 style = "text-align:center; color:#12A67F; font-family:Gadugi;"><b>Alzheimer</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
-    st.write("")
+
     st.write("""<h2 style = "text_align:left; color:#0C6A91; font-family:Gadugi;"><b>1. Alzheimer's stages</b><br><br></h2>""", unsafe_allow_html=True)
-    st.write("")
-    st.write("""<p style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left">In 2020, there are over 50 million people worldwide living with dementia. 
+
+    st.write("""<p style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left">In 2020, there are over 50 million people worldwide living with dementia.<br> 
              With population ageing and growth, this number will almost double every 20 years, reaching 82 million in 2030 and 152 million in 2050. 
              Moreover, the economic impact of dementia is already enormous, with total estimated worldwilde costs greater than US$ 1 trillion every year.<br><br>
              Alzheimer’s disease (AD) is the most common form of dementia accounting for an estimated 60% to 80% of cases. Since there is no effective Alzheimer’s treatment to date, 
