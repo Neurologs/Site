@@ -366,9 +366,9 @@ def page_alzheimer():
                 .time{color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} 
                 .st-bz.st-eo.st-ep.st-eq.st-er.st-es.st-az.st-b4.st-e0.st-et.st-ed.st-ef.st-ee.st-c6.st-ci.st-e8.st-dz.st-cz.st-b2.st-bp {background-color:#E2005B}
-                .css-1qpos38, .st-e9.st-ep.st-eq.st-er.st-es.st-d3.st-b2.st-bp.st-d4 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
+                .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
                 code, kbd {font-size: 120%; background-color:white; color: #bb0f6e;}
-                .css-1w0ubgf {background-color: lightyellow; height:250px}
+                .css-1w0ubgf, .st-e9.st-ep.st-eq.st-er.st-es.st-d3.st-b2.st-bp.st-d4 {background-color: lightyellow; height:250px}
                 .css-rncmk8.e1tzin5v0 p {text-align: center}
                 </style>""", unsafe_allow_html=True)
 
