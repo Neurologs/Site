@@ -273,7 +273,7 @@ def page_alzheimer():
                 .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; height: 350px; margin:0px}
                 @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
-                span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;}
+                span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;} .st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb {color: #3AB8D2;}
                 </style>""", unsafe_allow_html=True)
     
     
@@ -622,7 +622,7 @@ def page_tumors():
     .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
     label {display: inline-flex}
     @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
-    span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;}
+    span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;} .st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb {color: #3AB8D2;}
     </style>""", unsafe_allow_html=True)
 
     st.write("")
@@ -716,7 +716,7 @@ def page_tumors():
         image_t1_ce = nib.load("Demo3/t1ce.nii").get_fdata()
         niimg = nl.image.load_img("Demo3/flair.nii")
         nimask = nl.image.load_img("Demo3/seg.nii")
-        cut = [83, -40, 78]
+        cut = [83, -70, 78]
 
     if demo_selection == 'Demo 1' or demo_selection == 'Demo 2' or demo_selection == 'Demo 3':
 
@@ -736,7 +736,7 @@ def page_tumors():
         
             if interactive_view:
                 int_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
-                int_view.open_in_browser()
+                st.code(int_view.open_in_browser())
 
         with col2:
             st.write('FLAIR MRI\nOrthogonal views : Sagittal, Coronal, Axial')
