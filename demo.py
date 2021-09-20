@@ -223,7 +223,8 @@ def main():
     pages[page]()
     
     st.markdown(
-        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br .st-bq {font-weight: bold; color: #3ab8d2;} </style>""", unsafe_allow_html=True)
+        """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br .st-bq span.css-1qkncxf.e1pxm3bq4 {font-weight: bold; color: #3ab8d2;} 
+        </style>""", unsafe_allow_html=True)
 
 
 # HOMEPAGE
@@ -272,6 +273,7 @@ def page_alzheimer():
                 .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
                 .css-rncmk8.e1tzin5v0 {background-color: lightyellow; height: 350px; margin:0px}
                 @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
+                span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;}
                 </style>""", unsafe_allow_html=True)
     
     
@@ -619,8 +621,9 @@ def page_tumors():
     .css-rncmk8 {display: flex; flex-flow : row wrap; justify-content: space-around; width:698px;} 
     .css-1w0ubgf.e1tzin5v2 {background-color: lightyellow; height: 350px; margin:0px}
     label {display: inline-flex}
-     @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
-     </style>""", unsafe_allow_html=True)
+    @media screen and (max-width: 450px){.css-rncmk8{flex-flow: column wrap;}} 
+    span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;}
+    </style>""", unsafe_allow_html=True)
 
     st.write("")
     title = """<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>BRAIN TUMORS</b><br></h1>"""
