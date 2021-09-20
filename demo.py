@@ -716,7 +716,7 @@ def page_tumors():
         image_t1_ce = nib.load("Demo3/t1ce.nii").get_fdata()
         niimg = nl.image.load_img("Demo3/flair.nii")
         nimask = nl.image.load_img("Demo3/seg.nii")
-        cut = [83, -10, 78]
+        cut = [83, -100, 78]
 
     if demo_selection == 'Demo 1' or demo_selection == 'Demo 2' or demo_selection == 'Demo 3':
 
