@@ -238,7 +238,7 @@ def homepage():
     st.image(image_map, use_column_width=True)
 
     st.write("""<br><p style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left">Brain disorders are a major public health problem and addressing their enormous social and economic burden is an absolute emergency. As well as a formidable challenge.<br><br>
-    At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize the medicine.<br><br>
+    At Neurologs, we are convinced that Artificial Intelligence technologies could revolutionize Medicine.<br><br>
     Our teams works to provide healthcare professionals a comprehensive cloud-based Platform with AI-assisted diagnostics solutions, personalized treatment recommendation systems and tools for clinical research in the field of brain disorders.</p>""", unsafe_allow_html=True)
     st.write("")
       
