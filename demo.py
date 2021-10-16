@@ -257,9 +257,8 @@ def page_alzheimer():
                 #.st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}                                    
                 .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
-                 {border-color: yellow; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
-                .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;} 
-                .st-er {background-color: #0ec947;}
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
+                .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;}
                 .css-9ycgxx.exg6vvm3 {color:white}
                 .css-113fe4q.euu6i2w0 {color:gray}
                 .css-1op0mqd.exg6vvm2 {color:yellow} 
@@ -607,7 +606,7 @@ def page_tumors():
     .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}                                    
     .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
     .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
-    {border-color: yellow; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
+    {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
     .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;} 
      svg.st-cc.st-d2.st-bq.st-d3.st-d4.st-d5 {color: yellow}
     .st-er {background-color: #0ec947;}
