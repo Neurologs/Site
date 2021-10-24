@@ -739,9 +739,6 @@ def page_tumors():
             
             interactive_view = st.button('Interactive view')
         
-            if interactive_view:
-                int_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
-                open_view = int_view.open_in_browser()
 
         with col2:
             st.write('FLAIR MRI\nOrthogonal views : Sagittal, Coronal, Axial')
@@ -749,6 +746,12 @@ def page_tumors():
             nlplt.plot_anat(niimg, display_mode="ortho", annotate=False, draw_cross=False, figure=fig2)
             plt.axis('off')
             st.pyplot(fig2)
+            
+            if interactive_view:
+                fig2_int = plt.figure()
+                nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
+                plt.axis('off')
+                st.pyplot(fig2_int)
     
         st.write('')
         st.write('')
