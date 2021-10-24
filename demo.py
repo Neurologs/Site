@@ -739,27 +739,29 @@ def page_tumors():
             
             interactive_view = st.button('Interactive view')
         
-
         with col2:
             st.write('FLAIR MRI\nOrthogonal views : Sagittal, Coronal, Axial')
             fig2 = plt.figure()
             nlplt.plot_anat(niimg, display_mode="ortho", annotate=False, draw_cross=False, figure=fig2)
             plt.axis('off')
             st.pyplot(fig2)
-            
+        
+        st.write('')
+        st.write('')
+        
         if interactive_view:
-            html_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='Greys')
+            html_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='gist_gray')
             html_view.save_as_html('viewer.html')
             HtmlFile = open("viewer.html", 'r', encoding='utf-8')
             source_code = HtmlFile.read() 
-            components.html(source_code, height=300)
+            components.html(source_code, height=250)
     
         st.write('')
         st.write('')
         st.write('')
         st.write('')
 
-        segmentation_button = st.button('AUTOMATIC SEGMENTATION')
+        segmentation_button = st.button('AUTOMATIC  SEGMENTATION')
     
         st.write('')
         st.write('')
