@@ -750,7 +750,9 @@ def page_tumors():
             if interactive_view:
                 html_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
                 html_view.save_as_html('viewer.html')
-                components.html('viewer.html')
+                HtmlFile = open("viewer.html", 'r', encoding='utf-8')
+                source_code = HtmlFile.read() 
+                components.html(source_code)
     
         st.write('')
         st.write('')
