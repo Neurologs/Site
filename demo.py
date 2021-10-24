@@ -748,10 +748,9 @@ def page_tumors():
             st.pyplot(fig2)
             
             if interactive_view:
-                fig2_int = plt.figure()
-                nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
-                plt.axis('off')
-                st.pyplot(fig2_int)
+                html_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
+                html_view.save_as_html('viewer.html')
+                components.html('viewer.html')
     
         st.write('')
         st.write('')
