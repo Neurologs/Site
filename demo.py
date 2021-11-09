@@ -262,7 +262,6 @@ def page_alzheimer():
                 {background-color: #12A67F;}
                 .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;}
                 .st-ek {line-height: 30px;}
-                .st-eq {background-color: rgb(16 81 92);}
                 .css-9ycgxx.exg6vvm3 {color:white}
                 .css-113fe4q.euu6i2w0 {color:gray}
                 .css-1op0mqd.exg6vvm2 {color:yellow} 
