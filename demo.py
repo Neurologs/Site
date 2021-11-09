@@ -367,7 +367,6 @@ def page_alzheimer():
                 .st-bq {color:#3A4044}
                 .time {color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} 
-                .st-eo {background-color: #12A67F;}
                 .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
                 code, kbd {font-size: 120%; background-color:white; color: #bb0f6e;}
                 .css-1w0ubgf {background-color: lightyellow; height:250px}
