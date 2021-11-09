@@ -258,8 +258,8 @@ def page_alzheimer():
                 .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
                 .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
                 {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
-                span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-ez.st-eo.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg {
-                background-color: #12A67F;}
+                span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-ez.st-eo.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg 
+                {background-color: #12A67F;}
                 .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;}
                 .st-ek {line-height: 30px;}
                 .st-eq {background-color: rgb(16 81 92);}
@@ -368,6 +368,7 @@ def page_alzheimer():
                 p {color:#126F90; font-weight:bold; text-align:justify;}
                 li {color:#3b4a46; text-align:justify; font-weight:450}
                 .st-bq {color:#3A4044}
+                .st-bz.st-eo.st-ep.st-eq.st-er.st-es.st-az.st-b4.st-e0.st-et.st-ed.st-ef.st-ee.st-c6.st-ci.st-e8.st-dz.st-cz.st-b2.st-bp {background-color: #12A67F;}
                 .time {color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} 
                 .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
