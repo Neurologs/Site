@@ -371,6 +371,7 @@ def page_alzheimer():
                 li {color:#3b4a46; text-align:justify; font-weight:450}
                 .st-bq {color:#3A4044}
                 .st-bz.st-eo.st-ep.st-eq.st-er.st-es.st-az.st-b4.st-e0.st-et.st-ed.st-ef.st-ee.st-c6.st-ci.st-e8.st-dz.st-cz.st-b2.st-bp {background-color: #12A67F;}
+                .st-bz.st-er.st-ey.st-ez.st-f0.st-f1.st-az.st-b4.st-e4.st-f2.st-eh.st-ej.st-ei.st-c6.st-ci.st-ec.st-e3.st-cz.st-b2.st-bp {background-color: #12A67F;}
                 .time {color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} 
                 .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
