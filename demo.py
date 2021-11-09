@@ -260,7 +260,6 @@ def page_alzheimer():
                 {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
                 .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;}
                 .st-ek {line-height: 30px;}
-                .st-eo {background-color: #12A67F}
                 .css-9ycgxx.exg6vvm3 {color:white}
                 .css-113fe4q.euu6i2w0 {color:gray}
                 .css-1op0mqd.exg6vvm2 {color:yellow} 
@@ -368,7 +367,7 @@ def page_alzheimer():
                 .st-bq {color:#3A4044}
                 .time {color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} 
-                .st-eo {background-color: rgb(16 81 92);}
+                .st-eo {background-color: #12A67F;}
                 .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
                 code, kbd {font-size: 120%; background-color:white; color: #bb0f6e;}
                 .css-1w0ubgf {background-color: lightyellow; height:250px}
