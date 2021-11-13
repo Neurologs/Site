@@ -286,7 +286,6 @@ def page_alzheimer():
                 span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;} .st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb {color: #3AB8D2;}
                 </style>""", unsafe_allow_html=True)
     
-    
     title = """<h1 style = "text-align:center; color:#12A67F; font-family:Gadugi;"><b>Alzheimer</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
 
