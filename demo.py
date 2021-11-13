@@ -263,6 +263,8 @@ def page_alzheimer():
                 {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
                 span.st-ei.st-b2.st-bp.st-ej.st-ea.st-e4.st-ek.st-el.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eq.st-cc.st-e9.st-f4.st-dz.st-er.st-es.st-et.st-e6.st-e8.st-c6.st-e7.st-eu
                 {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
+                .st-ei.st-b2.st-bp.st-ej.st-ea.st-e4.st-ek.st-el.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eq.st-cc.st-e9.st-f8.st-dz.st-er.st-es.st-et.st-e6.st-e8.st-c6.st-e7.st-eu
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
                 span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-ez.st-eo.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg 
                 {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
                 span.st-e1.st-b2.st-bp.st-e2.st-e3.st-e4.st-e5.st-e6.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eb.st-cc.st-ec.st-eq.st-er.st-ee.st-ef.st-eg.st-eh.st-ei.st-c6.st-ej.st-ek 
