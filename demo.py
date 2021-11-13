@@ -615,6 +615,8 @@ def page_tumors():
     st.write("""<style>
     .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}  
     .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
+    .st-ei.st-b2.st-bp.st-ej.st-ea.st-e4.st-ek.st-el.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-em.st-en.st-eo.st-ep.st-av.st-aw.st-ax.st-ay.st-eq.st-cc.st-e9.st-eg.st-er.st-es.st-et.st-e6.st-e8.st-c6.st-e7.st-eu
+    {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
     .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
     {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
     span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-ez.st-eo.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
