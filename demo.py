@@ -274,7 +274,6 @@ def page_alzheimer():
                 .css-1op0mqd.exg6vvm2 {color:yellow} 
                 .css-1qpos38 {background-color:#12A67F; color:white; font-size:18px} 
                 .row-widget.stButton {text-align:center}
-                label {display: inline-flex}
                 .uploadedFileData.css-1l4firl.exg6vvm8 {color:#10515C}
                 .css-rncmk8 > * {margin:0px}
                  p {text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
