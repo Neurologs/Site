@@ -226,7 +226,7 @@ def main():
         """<style>.st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb, .css-1d0tddh.e1wbw4rs0, .st-br .st-bq span.css-1qkncxf.e1pxm3bq4 {font-weight: bold; color: #3ab8d2;} 
         </style>""", unsafe_allow_html=True)
 
-
+    
 # HOMEPAGE
 
 def homepage():
@@ -824,7 +824,7 @@ def ongoing_page():
     st.write("""<h1 style = "text_align:center; color:#12A67F; font-family:Gadugi;"><b>Ongoing projects</b></h1><br>""", unsafe_allow_html=True)
     st.write("")
     st.write("")
-    image_projects = "images/projects.jpg"
+    image_projects = "images/project_dementias.png"
     st.image(image_projects, use_column_width=True)
 
     
