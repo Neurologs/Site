@@ -215,7 +215,7 @@ with st.sidebar:
 def main():
     pages = {
         "Home": homepage,
-        "Alzheimer": page_alzheimer,
+        "Alzheimer's": page_alzheimer,
         "Brain Tumors": page_tumors,
         "Ongoing projects": ongoing_page}
 
@@ -254,17 +254,28 @@ def homepage():
 def page_alzheimer():
      
     st.write("""<style>
-                #.st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}                                    
-                .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
-                .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
-                 {border-color: yellow; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
-                .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;} 
+                #.st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}   
+                span.st-ei.st-b2.st-bp.st-ej.st-ea.st-e4.st-ek.st-el.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-em.st-en.st-eo.st-ep.st-av.st-aw.st-ax.st-ay.st-eq.st-cc.st-e9.st-eg.st-er.st-es.st-et.st-e6.st-e8.st-c6.st-e7.st-eu
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
+                span.st-e1.st-b2.st-bp.st-e2.st-e3.st-e4.st-e5.st-e6.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e7.st-e8.st-e9.st-ea.st-av.st-aw.st-ax.st-ay.st-eb.st-cc.st-ec.st-ed.st-ee.st-ef.st-eg.st-eh.st-ei.st-c6.st-ej.st-ek
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
+                span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
+                span.st-ei.st-b2.st-bp.st-ej.st-ea.st-e4.st-ek.st-el.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eq.st-cc.st-e9.st-f4.st-dz.st-er.st-es.st-et.st-e6.st-e8.st-c6.st-e7.st-eu
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
+                .st-ei.st-b2.st-bp.st-ej.st-ea.st-e4.st-ek.st-el.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eq.st-cc.st-e9.st-f8.st-dz.st-er.st-es.st-et.st-e6.st-e8.st-c6.st-e7.st-eu
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
+                span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-ez.st-eo.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg 
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
+                span.st-e1.st-b2.st-bp.st-e2.st-e3.st-e4.st-e5.st-e6.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-eb.st-cc.st-ec.st-eq.st-er.st-ee.st-ef.st-eg.st-eh.st-ei.st-c6.st-ej.st-ek 
+                {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
+                .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;}
+                .st-ek {line-height: 30px;}
                 .css-9ycgxx.exg6vvm3 {color:white}
                 .css-113fe4q.euu6i2w0 {color:gray}
                 .css-1op0mqd.exg6vvm2 {color:yellow} 
                 .css-1qpos38 {background-color:#12A67F; color:white; font-size:18px} 
                 .row-widget.stButton {text-align:center}
-                label {display: inline-flex}
                 .uploadedFileData.css-1l4firl.exg6vvm8 {color:#10515C}
                 .css-rncmk8 > * {margin:0px}
                  p {text-align:center; font_size:18px; color:#3b4a46; font-weight:bold}
@@ -276,7 +287,6 @@ def page_alzheimer():
                 span.css-1qkncxf.e1pxm3bq4 {color: #3AB8D2;} .st-c5.st-bc.st-c6.st-c7.st-c8.st-be.st-c9.st-ca.st-cb {color: #3AB8D2;}
                 </style>""", unsafe_allow_html=True)
     
-    
     title = """<h1 style = "text-align:center; color:#12A67F; font-family:Gadugi;"><b>Alzheimer</b></h1><br>"""
     st.markdown(title, unsafe_allow_html=True)
 
@@ -284,7 +294,7 @@ def page_alzheimer():
 
     st.write("""<p style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left">In 2020, there are over 50 million people worldwide living with dementia.<br> 
              With population ageing and growth, this number will almost double every 20 years, reaching 82 million in 2030 and 152 million in 2050. 
-             Moreover, the economic impact of dementia is already enormous, with total estimated worldwilde costs greater than US$ 1 trillion every year.<br><br>
+             Moreover, the economic impact of dementia is already enormous, with total estimated worldwilde costs greater than US$ one trillion every year.<br><br>
              Alzheimer’s disease (AD) is the most common form of dementia accounting for an estimated 60% to 80% of cases. Since there is no effective Alzheimer’s treatment to date, 
              early diagnosis and measures to reduce or prevent further progression of disease are crucial.<hr></p>
              <p style="font-size:108%; color:#3b4a46; font-weight:450; text-align:left">AD is characterized by the formation of amyloid plaques and neurofibrillary tangles, resulting from accumulation of abnormal amounts of amyloid-β [Aβ] and hyperphosphorylated tau proteins, 
@@ -363,10 +373,11 @@ def page_alzheimer():
     st.markdown("""<style>
                 p {color:#126F90; font-weight:bold; text-align:justify;}
                 li {color:#3b4a46; text-align:justify; font-weight:450}
-                .st-bq{color:#3A4044}
-                .time{color:#bb0f6e}
+                .st-bq {color:#3A4044}
+                .st-bz.st-eo.st-ep.st-eq.st-er.st-es.st-az.st-b4.st-e0.st-et.st-ed.st-ef.st-ee.st-c6.st-ci.st-e8.st-dz.st-cz.st-b2.st-bp {background-color: #12A67F;}
+                .st-bz.st-er.st-ey.st-ez.st-f0.st-f1.st-az.st-b4.st-e4.st-f2.st-eh.st-ej.st-ei.st-c6.st-ci.st-ec.st-e3.st-cz.st-b2.st-bp {background-color: #12A67F;}
+                .time {color:#bb0f6e}
                 div.row-widget.stRadio > div{flex-direction:row;} 
-                .st-bz.st-eo.st-ep.st-eq.st-er.st-es.st-az.st-b4.st-e0.st-et.st-ed.st-ef.st-ee.st-c6.st-ci.st-e8.st-dz.st-cz.st-b2.st-bp {background-color:#E2005B}
                 .css-1qpos38 {text-align:center; background-color:#12A67F; color:white; font-size:150%; height:60px; margin-top:20px;} 
                 code, kbd {font-size: 120%; background-color:white; color: #bb0f6e;}
                 .css-1w0ubgf {background-color: lightyellow; height:250px}
@@ -603,13 +614,19 @@ def page_alzheimer():
 def page_tumors():
         
     st.write("""<style>
-    .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}                                    
+    .st-bq, .st-br {color:#10515C} .st-ag {font-weight: bold} .st-af {font-size: 1rem}  
     .st-e4 .st-e5 .st-e6, .st-e7, .st-d7, .st-d8, .st_d9, st-da {border-color:yellow}
+    .st-ei.st-b2.st-bp.st-ej.st-ea.st-e4.st-ek.st-el.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-em.st-en.st-eo.st-ep.st-av.st-aw.st-ax.st-ay.st-eq.st-cc.st-e9.st-eg.st-er.st-es.st-et.st-e6.st-e8.st-c6.st-e7.st-eu
+    {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
     .st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-e3.st-e4.st-e5.st-e6.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-e9.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
-    {border-color: yellow; height: 30px; width: 30px; border-width: 3px; transition-property: none;}
-    .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px;} 
-    .st-er {background-color: rgb(16 81 92)}
-    svg.st-cc.st-d2.st-bq.st-d3.st-d4.st-d5 {color: yellow}
+    {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #555867;}
+    span.st-dx.st-b2.st-bp.st-dy.st-dz.st-e0.st-e1.st-e2.st-bc.st-bk.st-bl.st-bm.st-bn.st-bg.st-bh.st-bi.st-bj.st-d7.st-d8.st-d9.st-da.st-av.st-aw.st-ax.st-ay.st-e7.st-cc.st-e8.st-ez.st-eo.st-ea.st-eb.st-ec.st-ed.st-ee.st-c6.st-ef.st-eg
+    {border-color: yellow; height: 30px; width: 30px; border-width: 3px; background-color: #12A67F;}
+    .st-e1 {height: 30px; width: 30px; padding-left: 6px; padding-top:5px; margin-left: 18px; margin-right: 10px} 
+    .st-ed {background-color: rgb(16 81 92)}
+    .st-er, st-es {background-color: #6af383;}
+    .st-ek {line-height: 30px;}
+     svg.st-cc.st-d2.st-bq.st-d3.st-d4.st-d5 {color: yellow}
     .css-9ycgxx.exg6vvm3 {color:white}
     .css-113fe4q.euu6i2w0 {color:gray}
     .css-1op0mqd.exg6vvm2 {color:yellow} 
@@ -734,23 +751,29 @@ def page_tumors():
             
             interactive_view = st.button('Interactive view')
         
-            if interactive_view:
-                int_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='binary')
-                open_view = int_view.open_in_browser()
-
         with col2:
             st.write('FLAIR MRI\nOrthogonal views : Sagittal, Coronal, Axial')
             fig2 = plt.figure()
             nlplt.plot_anat(niimg, display_mode="ortho", annotate=False, draw_cross=False, figure=fig2)
             plt.axis('off')
             st.pyplot(fig2)
+        
+        st.write('')
+        st.write('')
+        
+        if interactive_view:
+            html_view = nlplt.view_img(niimg, bg_img=False, colorbar=False, threshold='auto', black_bg=True, cmap='RdGy')
+            html_view.save_as_html('viewer.html')
+            HtmlFile = open("viewer.html", 'r', encoding='utf-8')
+            source_code = HtmlFile.read() 
+            components.html(source_code, height=280)
     
         st.write('')
         st.write('')
         st.write('')
         st.write('')
 
-        segmentation_button = st.button('AUTOMATIC SEGMENTATION')
+        segmentation_button = st.button('AUTOMATIC  SEGMENTATION')
     
         st.write('')
         st.write('')
