@@ -215,7 +215,7 @@ with st.sidebar:
 def main():
     pages = {
         "Home": homepage,
-        "Alzheimer": page_alzheimer,
+        "Alzheimer's": page_alzheimer,
         "Brain Tumors": page_tumors,
         "Ongoing projects": ongoing_page}
 
